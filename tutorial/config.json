@@ -1,6 +1,6 @@
 {
-    "title": "Learn You programmable-sms For Much Win",
-    "repo": "<your GitHub username>/<GitHub repo name>",
-    "description": "Thanks for writing a tutorial with Viewsaurus! This example tutorial will show you the basic functionality of Viewsaurus. Click the \"Start\" button below to see how Viewsaurus works.",
+    "title": "Programmable SMS",
+    "repo": "ringcentral-tutorials/programmable-sms",
+    "description": "A comprehensive tutorial to teach users to use RingCentral SMS in a programmable way. Click the \"Start\" button below to start the tutorial.",
     "heroku": false
 }
