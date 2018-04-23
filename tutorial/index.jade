@@ -6,29 +6,22 @@
 
     p The tutorial's navigation controls are located above this text. Use <i class="fa fa-fw fa-play"></i> to move to the next step of the tutorial. Use <i class="fa fa-fw fa-play fa-rotate-180"></i> to move to the previous step of the tutorial (if there is one). Use <i class="fa fa-fw fa-list"></i> to see an overview of all the steps in the tutorial.
 
-  .step(data-title='Tutorial Configuration', data-file='tutorial/config.json')
+  .step(data-title='Environment Variables', data-file='.env.sample')
     :markdown
-      ## Configuration
+      ## Environment Variables
 
-      The first file we'll look at is `config.json`. This contains high-level configuration information about your tutorial. This JSON file contains several properties you can declare about your tutorial:
+      The first file we'll look at is `.env.sample`. This contains all the environment variables we used in this tutorial. You need to follow its sample to create `.env` file which contains real RingCentral credentials.
 
-      * `title`: This is the title of your tutorial which will show on the first page
-      * `description`: This is a string of text that will appear above the "Start" button for your tutorial.
-      * `repo`: This is the GitHub repo that your code lives in. Right now we assume all projects are hosted there, but we'll likely make this agnostic in the future.
-      * `heroku`: This indicates whether or not your project supports instant deployment with the [Heroku Button](https://blog.heroku.com/archives/2014/8/7/heroku-button)
+      Most of the environment variables are quite self-explanatory except the last one: `RINGCENTRAL_RECEIVER`. It means the number to receive SMS. You can set it to your own mobile phone number so that you can confirm the receipt of SMS.
 
-      Now, let's take a look at the first file that contains the actual content of the tutorial, `index.jade`.
+  .step(data-title='Send SMS - 1', data-file='send-sms.js')
+    :markdown
+      ## Send SMS - 1
 
-  .step(data-title='Step Two')
-    h2 Under Construction
+      We create a `send-sms.js` for SMS sending.
 
-    p more tutorial to come.
+  .step(data-title='Send SMS - 2', data-file='send-sms.js', data-highlight='2-4')
+    :markdown
+      ## Send SMS - 2
 
-  //- Example: include markdown file
-    .step(data-title='Step Three', data-file='', data-highlight='')
-      include:markdown three.md
-
-  //- Example: include jade file (don't need file extension)
-    .step(data-title='Step Four', data-file='', data-highlight='')
-      include four
-
+      Load environment variables from `.env` file.
