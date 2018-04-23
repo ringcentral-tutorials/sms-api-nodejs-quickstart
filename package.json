@@ -1,0 +1,11 @@
+{
+  "name": "programmable-sms",
+  "version": "0.1.0",
+  "scripts": {
+    "upgrade": "yarn-upgrade-all"
+  },
+  "devDependencies": {
+    "standard": "^11.0.1",
+    "yarn-upgrade-all": "^0.3.0"
+  }
+}
