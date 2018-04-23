@@ -1,8 +1,13 @@
 {
   "name": "programmable-sms",
   "version": "0.1.0",
+  "description": "A comprehensive tutorial to teach users to use RingCentral SMS in a programmable way.",
   "scripts": {
     "upgrade": "yarn-upgrade-all"
+  },
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "ringcentral": "^3.2.0"
   },
   "devDependencies": {
     "standard": "^11.0.1",
