@@ -12,7 +12,7 @@ const rcsdk = new SDK({
 
 const platform = rcsdk.platform()
 
-rcsdk.platform().login({
+platform.login({
   username: process.env.RINGCENTRAL_USERNAME,
   extension: process.env.RINGCENTRAL_EXTENSION,
   password: process.env.RINGCENTRAL_PASSWORD
