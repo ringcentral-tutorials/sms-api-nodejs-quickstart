@@ -1,8 +1,10 @@
 {
   "name": "programmable-sms",
   "version": "0.1.0",
+  "license": "MIT",
   "description": "A comprehensive tutorial to teach users to use RingCentral SMS in a programmable way.",
   "scripts": {
+    "build": "cd docs && ../node_modules/.bin/saurus author",
     "upgrade": "yarn-upgrade-all"
   },
   "dependencies": {
@@ -12,6 +14,7 @@
   },
   "devDependencies": {
     "standard": "^11.0.1",
+    "viewsaurus-ringcentral": "^0.4.7",
     "yarn-upgrade-all": "^0.3.0"
   }
 }

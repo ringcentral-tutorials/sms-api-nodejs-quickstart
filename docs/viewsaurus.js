@@ -9,6 +9,50 @@
 var Base64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(r){var t,e,o,a,h,n,c,d="",C=0;for(r=Base64._utf8_encode(r);C<r.length;)t=r.charCodeAt(C++),e=r.charCodeAt(C++),o=r.charCodeAt(C++),a=t>>2,h=(3&t)<<4|e>>4,n=(15&e)<<2|o>>6,c=63&o,isNaN(e)?n=c=64:isNaN(o)&&(c=64),d=d+this._keyStr.charAt(a)+this._keyStr.charAt(h)+this._keyStr.charAt(n)+this._keyStr.charAt(c);return d},decode:function(r){var t,e,o,a,h,n,c,d="",C=0;for(r=r.replace(/[^A-Za-z0-9\+\/\=]/g,"");C<r.length;)a=this._keyStr.indexOf(r.charAt(C++)),h=this._keyStr.indexOf(r.charAt(C++)),n=this._keyStr.indexOf(r.charAt(C++)),c=this._keyStr.indexOf(r.charAt(C++)),t=a<<2|h>>4,e=(15&h)<<4|n>>2,o=(3&n)<<6|c,d+=String.fromCharCode(t),64!=n&&(d+=String.fromCharCode(e)),64!=c&&(d+=String.fromCharCode(o));return d=Base64._utf8_decode(d)},_utf8_encode:function(r){r=r.replace(/\r\n/g,"\n");for(var t="",e=0;e<r.length;e++){var o=r.charCodeAt(e);128>o?t+=String.fromCharCode(o):o>127&&2048>o?(t+=String.fromCharCode(o>>6|192),t+=String.fromCharCode(63&o|128)):(t+=String.fromCharCode(o>>12|224),t+=String.fromCharCode(o>>6&63|128),t+=String.fromCharCode(63&o|128))}return t},_utf8_decode:function(r){for(var t="",e=0,o=c1=c2=0;e<r.length;)o=r.charCodeAt(e),128>o?(t+=String.fromCharCode(o),e++):o>191&&224>o?(c2=r.charCodeAt(e+1),t+=String.fromCharCode((31&o)<<6|63&c2),e+=2):(c2=r.charCodeAt(e+1),c3=r.charCodeAt(e+2),t+=String.fromCharCode((15&o)<<12|(63&c2)<<6|63&c3),e+=3);return t}};
 
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+var GoogleAnalytics = function (id) {
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', id, 'auto');
+    this.trackPage = function (url, percentage, step, totalSteps) {
+
+        var title = window.tutorialName || document.title;
+
+
+        ga('set', 'dimension1', title);
+        ga('set', 'dimension2', percentage);
+        ga('set', 'dimension3', url);
+        ga('set', 'dimension4', step);
+        ga('set', 'dimension5', totalSteps);
+
+
+        ga(function() {
+            var clientId = ga.getAll()[0].get('clientId');
+            ga('set', 'dimension6', clientId);
+            ga('send', 'pageview',{'dimension6' : clientId})
+        });
+
+        ga('send', 'pageview', {
+            'dimension1': title,
+            'dimension2': percentage,
+            'dimension3': url,
+            'dimension4': step,
+            'dimension5': totalSteps
+        });
+    };
+};
+
+module.exports = GoogleAnalytics;
+},{}],2:[function(require,module,exports){
 var Router = Backbone.Router.extend({
     routes: {
         ':stepIndex': 'doRoute'
@@ -30,11 +74,19 @@ var Router = Backbone.Router.extend({
             si = self.app.totalSteps - 1;
         }
         self.app.set('stepIndex', si);
+
+        if (si === self.app.totalSteps - 1) {
+            setTimeout(function () {
+                mixpanelClient.track(mixpanelClient.eventNames.COMPLETE_TUTORIAL, {
+                    'Tutorial Name': window.tutorialName
+                });
+            });
+        }
     }
 });
 
 module.exports = Router;
-},{}],2:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 var ViewsaurusView = require('./views/ViewsaurusView');
 var Router = require('./Router');
 
@@ -84,15 +136,274 @@ module.exports = Backbone.Model.extend({// Initialize model and app
     }
 });
 
-},{"./Router":1,"./views/ViewsaurusView":7}],3:[function(require,module,exports){
-var Viewsaurus = require('./Viewsaurus');
+},{"./Router":2,"./views/ViewsaurusView":10}],4:[function(require,module,exports){
+var dpwMenu = function () {
+    var items = [
+        {
+            title: 'API Product',
+            items: [
+                {
+                    title: 'Voice',
+                    link: 'https://developer.ringcentral.com/api-products/voice'
+                },
+                {
+                    title: 'SMS/MMS',
+                    link: 'https://developer.ringcentral.com/api-products/sms'
+                },
+                {
+                    title: 'Fax',
+                    link: 'https://developer.ringcentral.com/api-products/fax'
+                },
+                {
+                    title: 'Glip - Team Messaging',
+                    link: 'https://developer.ringcentral.com/api-products/team-messaging'
+                },
+                {
+                    title: 'Data',
+                    link: 'https://developer.ringcentral.com/api-products/data'
+                },
+                {
+                    title: 'Configuration',
+                    link: 'https://developer.ringcentral.com/api-products/configuration'
+                }
+            ]
+        },
+        {
+            title: 'Use Cases',
+            link: 'https://developer.ringcentral.com/overview.html',
+            items: [
+                {
+                    title: 'CRM Integration',
+                    link: 'https://developer.ringcentral.com/overview/crm-integration.html'
+                },
+                {
+                    title: 'Send SMS and Fax',
+                    link: 'https://developer.ringcentral.com/overview/sms-fax.html'
+                },
+                {
+                    title: 'Click to Dial',
+                    link: 'https://developer.ringcentral.com/overview/click-to-dial.html'
+                },
+                {
+                    title: 'Call Reporting',
+                    link: 'https://developer.ringcentral.com/overview/call-reporting.html'
+                },
+                {
+                    title: 'WebRTC Voice',
+                    link: 'https://developer.ringcentral.com/overview/webrtc-voice.html'
+                },
+                {
+                    title: 'Data Sync',
+                    link: 'https://developer.ringcentral.com/overview/data-sync.html'
+                },
+                {
+                    title: 'Team Messaging',
+                    link: 'https://developer.ringcentral.com/overview/team-messaging.html'
+                }
+            ]
+        },
+        {
+            title: 'API & Docs',
+            link: 'https://developer.ringcentral.com/api-and-docs.html',
+            items: [
+                {
+                    title: 'Getting Started',
+                    link: 'https://developer.ringcentral.com/library/getting-started.html'
+                },
+                {
+                    title: 'Developer Guide',
+                    link: 'http://ringcentral-api-docs.readthedocs.io/',
+                    external: true
+                },
+                {
+                    title: 'Tutorials',
+                    link: 'https://ringcentral.github.io/tutorials/'
+                },
+                {
+                    title: 'API Reference',
+                    link: 'https://developer.ringcentral.com/api-docs/latest/index.html'
+                },
+                {
+                    title: 'Changelog',
+                    link: 'http://ringcentral-api-changelog.readthedocs.io/en/latest/',
+                    external: true
+                },
+                {
+                    title: 'SDKs',
+                    link: 'https://developer.ringcentral.com/library/sdks.html'
+                },
+                {
+                    title: 'Chatbots',
+                    link: 'https://developer.ringcentral.com/library/chatbots.html'
+                },
+                {
+                    title: 'API Explorer',
+                    link: 'https://developer.ringcentral.com/api-explorer/latest/index.html'
+                }
+            ]
+        },
+        {
+            title: 'App Gallery',
+            link: 'https://developer.ringcentral.com/app-gallery.html',
+            external: true
+        },
+        {
+            title: 'Services & Support',
+            link: 'https://developer.ringcentral.com/support.html',
+            items: [
+                {
+                    title: 'Services',
+                    link: 'https://developer.ringcentral.com/support/services.html'
+                },
+                {
+                    title: 'Community',
+                    link: 'https://devcommunity.ringcentral.com/',
+                    external: true
+                },
+                {
+                    title: 'FAQ',
+                    link: 'http://ringcentral-faq.readthedocs.io/',
+                    external: true
+                },
+                {
+                    title: 'Blog',
+                    link: 'https://medium.com/ringcentral-developers',
+                    external: true
+                },
+                {
+                    title: 'Stack Overflow',
+                    link: 'http://stackoverflow.com/questions/tagged/ringcentral',
+                    external: true,
+                    notRCLink: true
+                }
+            ]
+        }
+    ];
 
-$(function() {
+    this.render = function () {
+        var html = '<ul class="nav-top-menus-list">';
+        items.forEach(function (item) {
+            html += '<li class="nav-top-menus-item">';
+            if (item.link) {
+                html += '<a class="menu-title" href="' + item.link + '" target="' + getLinkTarget(item) + '">' + item.title + '</a>';
+            }
+            else {
+                html += '<a class="menu-title no-links">' + item.title + '</a>';
+            }
+
+            if (item.items) {
+                html += '<ul class="nav-top-menus-item-submenu header-top-menus-arrow">';
+
+                item.items.forEach(function (subItem) {
+                    html += subItem.notRCLink ? '<li class="external-link">' : '<li>';
+                    html += '<a href="' + subItem.link + '" target="' + getLinkTarget(subItem) + '">' + subItem.title + '</a>';
+                    html += '</li>';
+                });
+
+                html += '</ul>';
+            }
+
+            html += '</li>';
+        });
+        html += '</ul>';
+
+        $(".nav-top-menus").html(html);
+    };
+
+    function getLinkTarget(item) {
+        return item.external ? "_blank" : "";
+    }
+};
+
+module.exports = dpwMenu;
+},{}],5:[function(require,module,exports){
+var Viewsaurus = require('./Viewsaurus');
+var GoogleAnalytics = require('./GoogleAnalytics');
+var Mixpanel = require('./mixpanel');
+var dpwMenu = require('./dpwMenu');
+
+$(function () {
+
+    new dpwMenu().render();
+
+    // create GA client
+    window.GAClient = new GoogleAnalytics("UA-57519112-3");
+    var totalSteps = $('.saurus-prose .step').length;
+
+    GAClient.trackPage(location.href, 0, 0, totalSteps);
     // create global viewsaurus object
     window.viewsaurus = new Viewsaurus();
+
+    var $prose = $(".saurus-prose");
+    var minHeight = $prose.height();
+    var minWidth = $prose.width();
+    $prose.resizable({
+        resize: function () {
+            $(".saurus-code").css('left', $prose.width());
+        },
+        minHeight: minHeight,
+        minWidth: minWidth
+    });
+
+    $(window).resize(function (event) {
+        if (event.target === window) {
+            $prose.resizable("option", "minHeight", $prose.height());
+        }
+    });
+
+    // Create Mixpanel client
+    window.mixpanelClient = new Mixpanel('60593de695a204f03647d2fb95d96313');
+    mixpanelClient.identifyUserFromURL();
+
+    mixpanelClient.track(mixpanelClient.eventNames.PAGE_VIEW, {
+        'Page Name': 'Tutorials: ' + window.tutorialName
+    });
+
+    viewsaurus.mainView.proseView.$start.find('a').click(function () {
+        mixpanelClient.track(mixpanelClient.eventNames.START_TUTORIAL, {
+            'Tutorial Name': window.tutorialName
+        });
+    });
 });
 
-},{"./Viewsaurus":2}],4:[function(require,module,exports){
+},{"./GoogleAnalytics":1,"./Viewsaurus":3,"./dpwMenu":4,"./mixpanel":6}],6:[function(require,module,exports){
+var Mixpanel = function (token) {
+    (function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+        0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+        for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+
+    mixpanel.init(token, {autotrack: false});
+};
+
+Mixpanel.prototype.eventNames = {
+    PAGE_VIEW: 'Pageviews',
+    START_TUTORIAL: 'Start Tutorial',
+    COMPLETE_TUTORIAL: 'Complete Tutorial'
+};
+
+Mixpanel.prototype.distinctIdUrlSearchKey = 'distinctId';
+
+Mixpanel.prototype.track = function (eventName, properties) {
+    mixpanel.track(eventName, properties);
+};
+
+Mixpanel.prototype.identifyUserFromURL = function () {
+    var searchParamPairs = location.search.substring(1).split('&');
+    var searchParams = _.reduce(searchParamPairs, function (accumulated, pair) {
+        var keyValueGroup = pair.split('=');
+        var key = _.first(keyValueGroup);
+        accumulated[key] = _.last(keyValueGroup);
+        return accumulated;
+    }, {});
+
+    var distinctId = searchParams[this.distinctIdUrlSearchKey];
+    if (distinctId) {
+        mixpanel.identify(distinctId);
+    }
+};
+
+module.exports = Mixpanel;
+},{}],7:[function(require,module,exports){
 var Range = ace.require('ace/range').Range;
 var explorerWidth = 270;
 
@@ -135,7 +446,7 @@ var CodeView = Backbone.View.extend({
         self.editor.$blockScrolling = Infinity;
         self.editor.setBehavioursEnabled(false);
         self.editor.setWrapBehavioursEnabled(false);
-        self.editor.setTheme('ace/theme/monokai');
+        self.editor.setTheme('ace/theme/ringcentral');
         self.editor.renderer.setScrollMargin(0,8, 0, 8);
         self.editor.getSession().setWrapLimitRange();
         // Disable syntax checker
@@ -269,7 +580,7 @@ var CodeView = Backbone.View.extend({
 });
 
 module.exports = CodeView;
-},{}],5:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 var explorerWidth = -270;
 var autoShowExplorer = 1280;
 
@@ -417,7 +728,7 @@ var ExplorerView = Backbone.View.extend({
 });
 
 module.exports = ExplorerView;
-},{}],6:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 // Get Title for a step either from a data attribute or the first title tag
 function titleForStep($e) {
     var title = $e.attr('data-title');
@@ -450,11 +761,11 @@ var ProseView = Backbone.View.extend({
         'click .saurus-start a': 'hideStart',
         'click .saurus-content img': 'showLightbox',
         'click .nav-previous': 'previous',
-        'click .nav-next': 'next' 
+        'click .nav-next': 'next'
     },
 
     // Initialize UI
-    initialize: function(options) {
+    initialize: function (options) {
         var self = this;
 
         // Store a reference to main app model and create view model
@@ -482,35 +793,35 @@ var ProseView = Backbone.View.extend({
 
         // On any history event, we want to hide the start screen
         Backbone.history.on('all', self.hideStart, self);
-    
+
         // Subscribe to model updates
         self.app.on('change:stepIndex', self.stepChanged, self);
         self.model.on('change:overviewShown', self.overviewChanged, self);
     },
 
     // Analytics - fire event on main app for next/previous
-    next: function() {
+    next: function () {
         var self = this;
         self.app.trigger('next');
     },
 
-    previous: function() {
+    previous: function () {
         var self = this;
         self.app.trigger('previous');
     },
 
     // Show a lightbox when an image is clicked
-    showLightbox: function(e) {
+    showLightbox: function (e) {
         var $img = $(e.currentTarget);
         $.featherlight($img.attr('src'));
     },
 
     // Hide the initial start prompt
-    hideStart: function() {
+    hideStart: function () {
         var self = this;
         if (!self.startFired) {
             // Defer to allow page listeners to register
-            _.defer(function() {
+            _.defer(function () {
                 self.app.trigger('start');
             });
             self.startFired = false;
@@ -519,12 +830,12 @@ var ProseView = Backbone.View.extend({
     },
 
     // Show the next step title
-    showNextStep: function(index) {
+    showNextStep: function (index) {
         var self = this;
         var text = "You did it! Good for you :)";
         if (index < self.app.totalSteps) {
             var $next = self.$content.find('.step').eq(index);
-            var truncated = titleForStep($next).substring(0,35);
+            var truncated = titleForStep($next).substring(0, 35);
             if (truncated.length > 34) {
                 truncated += '...';
             }
@@ -534,7 +845,7 @@ var ProseView = Backbone.View.extend({
     },
 
     // toggle overview shown on view model on button click
-    toggleOverview: function() {
+    toggleOverview: function () {
         var self = this;
         if (!self.model.get('overviewShown')) {
             self.app.trigger('show_overview');
@@ -543,20 +854,20 @@ var ProseView = Backbone.View.extend({
     },
 
     // Handle an updated step
-    stepChanged: function() {
+    stepChanged: function () {
         var self = this;
         var stepIndex = self.app.get('stepIndex');
         var $step = self.$el.find('.step').eq(stepIndex);
 
         // Update next step text
-        self.showNextStep(stepIndex+1);
+        self.showNextStep(stepIndex + 1);
 
         // Hide overview if it is showing
         self.model.set('overviewShown', false);
 
         // Update progress bar
         self.$progressBar.animate({
-            width: (((stepIndex+1) / self.app.totalSteps) * 100) + '%'
+            width: (((stepIndex + 1) / self.app.totalSteps) * 100) + '%'
         });
 
         // Update to the proper prose section
@@ -575,7 +886,7 @@ var ProseView = Backbone.View.extend({
         // Update next nav link
         if (self.app.hasNext()) {
             self.$next.addClass('clickable')
-                .find('a').attr('href', '#' + (self.app.get('stepIndex')+1));
+                .find('a').attr('href', '#' + (self.app.get('stepIndex') + 1));
         } else {
             // If there's no next step, we've reached the end for the first time
             if (!self.lastStepReached) {
@@ -589,42 +900,47 @@ var ProseView = Backbone.View.extend({
         // Update previous nav link
         if (self.app.hasPrevious()) {
             self.$previous.addClass('clickable')
-                .find('a').attr('href', '#' + (self.app.get('stepIndex')-1));
+                .find('a').attr('href', '#' + (self.app.get('stepIndex') - 1));
         } else {
             self.$previous.removeClass('clickable')
                 .find('a').attr('href', '#0');
         }
+
+        if (window.GAClient) {
+            var currentStep = stepIndex + 1;
+            window.GAClient.trackPage(location.href, ((currentStep / self.app.totalSteps).toFixed(3) * 100) + '%', currentStep, self.app.totalSteps);
+        }
     },
 
     // Handle overview show/hide
-    overviewChanged: function() {
+    overviewChanged: function () {
         var self = this;
         var shown = self.model.get('overviewShown');
 
         if (shown) {
             self.$overviewContent.animate({
-                left:0
+                left: 0
             });
             self.$overviewNav.addClass('fa-close')
-                .removeClass('fa-list');
+                .removeClass('icon-menu');
         } else {
             self.$overviewContent.animate({
-                left:'-100%'
+                left: '-100%'
             });
             self.$overviewNav.removeClass('fa-close')
-                .addClass('fa-list');
+                .addClass('icon-menu');
         }
     },
 
     // populate overview from data in the DOM
-    populateOverview: function() {
+    populateOverview: function () {
         var self = this;
         var html = '';
         var firstChapter = true;
         var stepIndex = 0;
 
         // Iterate over chapters, extract data, build overview HTML
-        self.$content.find('.chapter, .step').each(function() {
+        self.$content.find('.chapter, .step').each(function () {
             var $thing = $(this);
             if ($thing.hasClass('chapter')) {
                 if (!firstChapter) {
@@ -651,7 +967,7 @@ var ProseView = Backbone.View.extend({
 });
 
 module.exports = ProseView;
-},{}],7:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 var ProseView = require('./ProseView');
 var CodeView = require('./CodeView');
 var ExplorerView = require('./ExplorerView');
@@ -660,6 +976,8 @@ var ExplorerView = require('./ExplorerView');
 var ViewsaurusView = Backbone.View.extend({
     // Initialize UI
     initialize: function(options) {
+        var self = this;
+
         // Store a reference to main app model
         this.app = options.app;
 
@@ -671,4 +989,4 @@ var ViewsaurusView = Backbone.View.extend({
 });
 
 module.exports = ViewsaurusView;
-},{"./CodeView":4,"./ExplorerView":5,"./ProseView":6}]},{},[3]);
+},{"./CodeView":7,"./ExplorerView":8,"./ProseView":9}]},{},[5]);
