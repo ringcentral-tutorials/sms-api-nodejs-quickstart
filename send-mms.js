@@ -28,7 +28,7 @@ platform.login({
   formData.append('json', Buffer.from(JSON.stringify(body)), {filename: 'request.json', contentType: 'application/json'})
   formData.append('attachment', require('fs').createReadStream('./test.jpg'))
   platform.post('/account/~/extension/~/sms', formData).then(response => {
-    console.log('SMS sent: ' + response.json().id)
+    console.log('MMS sent: ' + response.json().id)
   }).catch(e => {
     console.error(e)
   })
