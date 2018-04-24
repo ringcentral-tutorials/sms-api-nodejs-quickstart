@@ -1,12 +1,12 @@
 .chapter(data-title='Programmable SMS')
-  .step(data-title='Welcome!', data-file='README.MD')
+  .step(data-title='Welcome!', data-file='../README.MD')
     h2 Welcome to Programmable SMS
 
     p This is a comprehensive tutorial to teach you to use RingCentral SMS in a programmable way.
 
     p The tutorial's navigation controls are located above this text. Use <i class="fa fa-fw fa-play"></i> to move to the next step of the tutorial. Use <i class="fa fa-fw fa-play fa-rotate-180"></i> to move to the previous step of the tutorial (if there is one). Use <i class="fa fa-fw fa-list"></i> to see an overview of all the steps in the tutorial.
 
-  .step(data-title='Environment Variables', data-file='.env.sample')
+  .step(data-title='Environment Variables', data-file='../.env.sample')
     :markdown
       ## Environment Variables
 
@@ -14,67 +14,67 @@
 
       Most of the environment variables are quite self-explanatory except the last one: `RINGCENTRAL_RECEIVER`. It means the number to receive SMS. You can set it to your own mobile phone number so that you can confirm the receipt of SMS.
 
-  .step(data-title='Send SMS - 1', data-file='send-sms.js')
+  .step(data-title='Send SMS - 1', data-file='../send-sms.js')
     :markdown
       ## Send SMS - 1
 
       Create file `send-sms.js` for SMS sending
 
-  .step(data-title='Send SMS - 2', data-file='send-sms.js', data-highlight='2-4')
+  .step(data-title='Send SMS - 2', data-file='../send-sms.js', data-highlight='2-4')
     :markdown
       ## Send SMS - 2
 
       Load environment variables from `.env` file
 
-  .step(data-title='Send SMS - 3', data-file='send-sms.js', data-highlight='6-10')
+  .step(data-title='Send SMS - 3', data-file='../send-sms.js', data-highlight='6-10')
     :markdown
       ## Send SMS - 3
 
       Initialize RingCentral SDK
 
-  .step(data-title='Send SMS - 4', data-file='send-sms.js', data-highlight='14-18')
+  .step(data-title='Send SMS - 4', data-file='../send-sms.js', data-highlight='14-18')
     :markdown
       ## Send SMS - 4
 
       Login via password
 
-  .step(data-title='Send SMS - 5', data-file='send-sms.js', data-highlight='19-25')
+  .step(data-title='Send SMS - 5', data-file='../send-sms.js', data-highlight='19-25')
     :markdown
       ## Send SMS - 5
 
       Send SMS
 
-  .step(data-title='Send SMS - 6', data-file='send-sms.js', data-highlight='26-26')
+  .step(data-title='Send SMS - 6', data-file='../send-sms.js', data-highlight='26-26')
     :markdown
       ## Send SMS - 6
 
       Print SMS id
 
-  .step(data-title='Send MMS - 1', data-file='send-mms.js')
+  .step(data-title='Send MMS - 1', data-file='../send-mms.js')
     :markdown
       ## Send MMS - 1
 
       Create file `send-mms.js` for MMS sending
 
-  .step(data-title='Send MMS - 2', data-file='send-mms.js', data-highlight='20-20')
+  .step(data-title='Send MMS - 2', data-file='../send-mms.js', data-highlight='20-20')
     :markdown
       ## Send MMS - 2
 
       Create a new FormData object
 
-  .step(data-title='Send MMS - 3', data-file='send-mms.js', data-highlight='21-28')
+  .step(data-title='Send MMS - 3', data-file='../send-mms.js', data-highlight='21-28')
     :markdown
       ## Send MMS - 3
 
       Add request body to formData
 
-  .step(data-title='Send MMS - 4', data-file='send-mms.js', data-highlight='29-29')
+  .step(data-title='Send MMS - 4', data-file='../send-mms.js', data-highlight='29-29')
     :markdown
       ## Send MMS - 4
 
       Add an image to formData
 
-  .step(data-title='Send MMS - 5', data-file='send-mms.js', data-highlight='30-30')
+  .step(data-title='Send MMS - 5', data-file='../send-mms.js', data-highlight='30-30')
     :markdown
       ## Send MMS - 5
 
@@ -82,7 +82,7 @@
 
       You can see that MMS and SMS share the same API endpoint: `/account/~/extension/~/sms`
 
-  .step(data-title='Send MMS - 6', data-file='send-mms.js', data-highlight='31-31')
+  .step(data-title='Send MMS - 6', data-file='../send-mms.js', data-highlight='31-31')
     :markdown
       ## Send MMS - 6
 
