@@ -19,86 +19,156 @@
     :markdown
       ## Send SMS - 1
 
-      Create file `send-sms.js` for SMS sending
+      ---
+
+      #### Create file `send-sms.js` for SMS sending
 
   .step(data-title='Send SMS - 2', data-file='../send-sms.js', data-highlight='2-4')
     :markdown
       ## Send SMS - 2
 
-      Load environment variables from `.env` file
+      ---
+
+      #### Load environment variables from `.env` file
 
   .step(data-title='Send SMS - 3', data-file='../send-sms.js', data-highlight='6-10')
     :markdown
       ## Send SMS - 3
 
-      Initialize RingCentral SDK
+      ---
+
+      #### Initialize RingCentral SDK
 
   .step(data-title='Send SMS - 4', data-file='../send-sms.js', data-highlight='14-18')
     :markdown
       ## Send SMS - 4
 
-      Login via password
+      ---
+
+      #### Login via password
 
   .step(data-title='Send SMS - 5', data-file='../send-sms.js', data-highlight='19-25')
     :markdown
       ## Send SMS - 5
 
-      Send SMS
+      ---
+
+      #### Send SMS
 
   .step(data-title='Send SMS - 6', data-file='../send-sms.js', data-highlight='26-26')
     :markdown
       ## Send SMS - 6
 
-      Print SMS id
+      ---
+
+      #### Print SMS id
 
 .chapter(data-title='Send MMS')
   .step(data-title='Send MMS - 1', data-file='../send-mms.js')
     :markdown
       ## Send MMS - 1
 
-      Create file `send-mms.js` for MMS sending
+      ---
+
+      #### Create file `send-mms.js` for MMS sending
 
   .step(data-title='Send MMS - 2', data-file='../send-mms.js', data-highlight='20-20')
     :markdown
       ## Send MMS - 2
 
-      Create a new FormData object
+      ---
+
+      #### Create a new FormData object
 
   .step(data-title='Send MMS - 3', data-file='../send-mms.js', data-highlight='21-28')
     :markdown
       ## Send MMS - 3
 
-      Add request body to formData
+      ---
+
+      #### Add request body to formData
 
   .step(data-title='Send MMS - 4', data-file='../send-mms.js', data-highlight='29-29')
     :markdown
       ## Send MMS - 4
 
-      Add an image to formData
+      ---
+
+      #### Add an image to formData
 
   .step(data-title='Send MMS - 5', data-file='../send-mms.js', data-highlight='30-30')
     :markdown
       ## Send MMS - 5
 
-      Send the MMS
+      ---
 
-      You can see that MMS and SMS share the same API endpoint: `/account/~/extension/~/sms`
+      #### Send the MMS
+
+      #### You can see that MMS and SMS share the same API endpoint: `/account/~/extension/~/sms`
 
   .step(data-title='Send MMS - 6', data-file='../send-mms.js', data-highlight='31-31')
     :markdown
       ## Send MMS - 6
 
-      Print the MMS id
+      ---
+
+      #### Print the MMS id
 
 .chapter(data-title='How to track delivery status of messages')
   .step(data-title='How to track delivery status of messages - 1', data-file='../track-status.js')
     :markdown
       ## How to track delivery status of messages - 1
 
-      Create file `track-status.js` for message status tracking.
+      ---
+
+      #### Create file `track-status.js` for message status tracking.
 
   .step(data-title='How to track delivery status of messages - 2', data-file='../track-status.js', data-highlight='27-29')
     :markdown
       ## How to track delivery status of messages - 2
 
-      If everything goes well, code highlighted on the right will print `Delivered`.
+      ---
+
+      #### If everything goes well, code highlighted on the right will print `Delivered`.
+
+.chapter(data-title='How to retrieve and modify message history')
+  .step(data-title='How to retrieve and modify message history - 1', data-file='../retrieve-modify.js')
+    :markdown
+      ## How to retrieve and modify message history - 1
+
+      ---
+
+      #### Create file `retrieve-modify` for retrieving and modifying message history.
+
+  .step(data-title='How to retrieve and modify message history - 2', data-file='../retrieve-modify.js', data-highlight='19-22')
+    :markdown
+      ## How to retrieve and modify message history - 2
+
+      ---
+
+      #### Get the list of messages.
+
+  .step(data-title='How to retrieve and modify message history - 3', data-file='../retrieve-modify.js', data-highlight='20-20')
+    :markdown
+      ## How to retrieve and modify message history - 3
+
+      ---
+
+      #### Here we set the parameter `dateFrom`, if we omit it, its value will by default be set to 24 hours ago.
+
+  .step(data-title='How to retrieve and modify message history - 4', data-file='../retrieve-modify.js', data-highlight='25-27')
+    :markdown
+      ## How to retrieve and modify message history - 4
+
+      ---
+
+      #### Update the read status of a message to "Read".
+
+
+  .step(data-title='How to retrieve and modify message history - 5', data-file='../retrieve-modify.js', data-highlight='31-33')
+    :markdown
+      ## How to retrieve and modify message history - 5
+
+      ---
+
+      #### Delete a message
