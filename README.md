@@ -7,4 +7,3 @@ A comprehensive tutorial to teach users to use RingCentral SMS in a programmable
 - How to track delivery status of messages
 - How to retrieve and modify message history
 - How to receive and reply to SMS messages
-- How to create an SMS conversation
