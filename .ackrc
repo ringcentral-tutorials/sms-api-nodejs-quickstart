@@ -1,0 +1,2 @@
+--ignore-file=match:/^index\.html$/
+--ignore-file=match:/^yarn-error\.log$/

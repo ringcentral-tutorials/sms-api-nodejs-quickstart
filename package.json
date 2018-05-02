@@ -1,8 +1,8 @@
 {
-  "name": "programmable-sms",
+  "name": "sms-api-nodejs-quickstart",
   "version": "0.1.0",
   "license": "MIT",
-  "description": "A comprehensive tutorial to teach users to use RingCentral SMS in a programmable way.",
+  "description": "A quickstart tutorial to teach users to use RingCentral SMS API.",
   "scripts": {
     "build": "cd docs && ../node_modules/.bin/saurus author",
     "upgrade": "yarn-upgrade-all"

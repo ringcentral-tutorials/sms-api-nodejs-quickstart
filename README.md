@@ -1,6 +1,6 @@
-# Programmable SMS
+# SMS API Node.js Quickstart
 
-A comprehensive tutorial to teach users to use RingCentral SMS in a programmable way. The following topics are included:
+A quickstart tutorial to teach users to use RingCentral SMS API. The following topics are included:
 
 - How to send SMS
 - How to send MMS

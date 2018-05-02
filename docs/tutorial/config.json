@@ -1,6 +1,6 @@
 {
-    "title": "Programmable SMS",
-    "repo": "ringcentral-tutorials/programmable-sms",
-    "description": "A comprehensive tutorial to teach users to use RingCentral SMS in a programmable way. Click the \"Start\" button below to start the tutorial.",
+    "title": "SMS API Node.js Quickstart",
+    "repo": "ringcentral-tutorials/sms-api-nodejs-quickstart",
+    "description": "A quickstart tutorial to teach users to use RingCentral SMS API. Click the \"Start\" button below to start the tutorial.",
     "heroku": false
 }
