@@ -16,6 +16,31 @@ style.
   #viewsaurus .saurus-code {
     left: 40%;
   }
+  #viewsaurus .saurus-prose a.btn,
+  #viewsaurus .saurus-prose a.btn:visited {
+    color: #fff;
+  }
+  .btn:visited,
+  .btn {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
 
 .chapter(data-title='SMS Application Walkthrough')
   .step(data-title='Welcome!', data-file='../README.MD')
@@ -62,8 +87,9 @@ style.
 
       *You can safely ignore the Redirect URI field.*
 
-      [Create SMS App &raquo;](https://developer.ringcentral.com/new-app?name=Sample+SMS+App&desc=A+sample+app+created+by+the+SMS+App+Walk-through&public=false&type=ServerOther&carriers=7710,7310,3420&permissions=SMS,ReadMessages,EditMessages,SubscriptionWebhook&redirectUri=)
-
+    a.btn(href="https://developer.ringcentral.com/new-app?name=Sample+SMS+App&desc=A+sample+app+created+by+the+SMS+App+Walk-through&public=false&type=ServerOther&carriers=7710,7310,3420&permissions=SMS,ReadMessages,EditMessages,SubscriptionWebhook&redirectUri=") Create SMS Application
+    
+    :markdown
       After creating the app, you will be taken to the app's dashboard. Make note of the following, as we will be using this in setting up your environment:
 
       * Client ID

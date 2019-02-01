@@ -26,6 +26,31 @@ ol {
 #viewsaurus .saurus-code {
   left: 40%;
 }
+#viewsaurus .saurus-prose a.btn,
+#viewsaurus .saurus-prose a.btn:visited {
+  color: #fff;
+}
+.btn:visited,
+.btn {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
 </style><div data-title="SMS Application Walkthrough" class="chapter"><div data-title="Welcome!" data-file="../README.MD" class="step"><h2>Welcome to SMS Application Walk-through</h2><p>This walk-through of an SMS application will show you how to go about building a fully functional SMS application. In this walk-through you will learn:</p><ul><li>How to setup your repository to work with multiple environments.</li><li>How to send a simple SMS.</li><li>How to send a image in an SMS message, a.k.a. "MMS."</li><li>How to track the delivery state of a message.</li><li>How to modify the message history.</li><li>How to reply to an SMS message. </li></ul><h3>Using this Walk-through</h3><p>Navigation controls are located above this text. Use <i class="fa fa-fw fa-play"></i> to move to the next step of the tutorial. Use <i class="fa fa-fw fa-play fa-rotate-180"></i> to move to the previous step of the tutorial (if there is one). Use <i class="fa fa-fw fa-list"></i> to see an overview of all the steps in the tutorial.</p></div><div data-title="Setup Your Project" data-file="../package.json" class="step"><h2 id="create-a-project">Create a Project</h2>
 <p>Let&#39;s begin where every new software project begins: setting up your local development environment and preparing your workspace to code. In node, we do this by creating a directory to hold our project files. The first file we create is our <code>package.json</code> file which defines our project name, and our dependencies. Create this file using the contents to the right.</p>
 <p>Then, go to the command line, and install your prerequisites.</p>
@@ -39,8 +64,7 @@ ol {
 <p>Now, let&#39;s setup RingCentral and your environment. </p>
 <p>The first step is to login to the RingCentral Developer Portal, and create an app. You can do this easily by clicking the button/link below, and then clicking the &quot;Create&quot; button.</p>
 <p><em>You can safely ignore the Redirect URI field.</em></p>
-<p><a href="https://developer.ringcentral.com/new-app?name=Sample+SMS+App&amp;desc=A+sample+app+created+by+the+SMS+App+Walk-through&amp;public=false&amp;type=ServerOther&amp;carriers=7710,7310,3420&amp;permissions=SMS,ReadMessages,EditMessages,SubscriptionWebhook&amp;redirectUri=">Create SMS App &raquo;</a></p>
-<p>After creating the app, you will be taken to the app&#39;s dashboard. Make note of the following, as we will be using this in setting up your environment:</p>
+<a href="https://developer.ringcentral.com/new-app?name=Sample+SMS+App&amp;desc=A+sample+app+created+by+the+SMS+App+Walk-through&amp;public=false&amp;type=ServerOther&amp;carriers=7710,7310,3420&amp;permissions=SMS,ReadMessages,EditMessages,SubscriptionWebhook&amp;redirectUri=" class="btn">Create SMS Application</a><p>After creating the app, you will be taken to the app&#39;s dashboard. Make note of the following, as we will be using this in setting up your environment:</p>
 <ul>
 <li>Client ID</li>
 <li>Client Secret</li>
