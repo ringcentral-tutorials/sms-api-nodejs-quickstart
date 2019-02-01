@@ -96,7 +96,15 @@ style.
     :markdown
       ## Sending an SMS
 
-      First, let's create a file called `send-sms.js` and place within it the code to the right. This script will work right out of the box. But let's walk-through what we just created so that you understand what is going on, and customize it to your needs. 
+      First, let's create a file called `send-sms.js` and place within it the code to the right. This script will work right out of the box. So let's try it out. Go to the console and run this command:
+
+      ```
+      $ node send-sms.js
+      ```
+
+      You should see the message Id output to the screen, and shortly an SMS will arrive on the recipient's phone. 
+
+      Now, let's walk-through the code to see what just happened. 
 
   .step(data-title='Sending an SMS: Initialization', data-file='../send-sms.js', data-highlight='2-12')
     :markdown
@@ -208,9 +216,23 @@ style.
 .chapter(data-title='Sending an Image')
   .step(data-title='Sending an Image', data-file='../send-mms.js')
     :markdown
+      ## Download an Image
+
+      First, let's find an image to send. Kittens FTW. Right click on the image below and save it to your project directory. 
+
+      ![Kittens](./test.jpg)
+
       ## Sending an Image
 
-      Just as we did before, let's create a new file called `semd-mms.js` using the contents to the right. Next we will walk through this file to highlight the key differences from sending a purely text message. 
+      Just as we did before, let's create a new file called `semd-mms.js` using the contents to the right. This script will work right out of the box. So let's first run it, and then walk-through the code in more detail to understand how it worked. 
+
+      ```
+      $ node send-sms.js
+      ```
+
+      You should see the message Id output to the screen, and shortly an SMS will arrive on the recipient's phone.
+
+      Next we will walk through this file to highlight the key differences from sending a purely text message. 
 
   .step(data-title='Sending an Image: FormData', data-file='../send-mms.js', data-highlight='3,20')
     :markdown
@@ -221,8 +243,6 @@ style.
       ```
       $ yarn install
       ```
-
-      #### Create a new FormData object
 
   .step(data-title='Sending an Image: Attachments', data-file='../send-mms.js', data-highlight='21-37')
     :markdown
@@ -251,7 +271,13 @@ style.
     :markdown
       ## How to track delivery status of message
 
-      Once a message has been sent, you can check to see if it was successfully delivered. In this example, you will see how the basic structure of the script mirrors that of the previous examples. We initialize the client, authenticate, and so forth. Let's begin as before: create a new file called `track-status.js` using the contents to the right. 
+      Once a message has been sent, you can check to see if it was successfully delivered. In this example, you should observe how the basic structure of the script mirrors that of the previous examples. We initialize the client, authenticate, and so forth. Let's begin as before: create a new file called `track-status.js` using the contents to the right. Then, let's run the script, and then follow up by explaining what is going on. 
+
+      ```
+      $ node track-status.js
+      ```
+
+      Running the above script should result in a response saying the message's status is "Queued." A message will be delivered to the recipient shortly, at which point the status will change to "Delivered."
 
   .step(data-title='Delivery Status', data-file='../track-status.js', data-highlight='26-29')
     :markdown
@@ -305,7 +331,13 @@ style.
     :markdown
       ## Message Histories
 
-      Create a file called `retrieve-modify.js` using the contents to the right. 
+      Create a file called `retrieve-modify.js` using the contents to the right, then run the script.
+
+      ```
+      $ node retrieve-modify.js
+      ```
+
+      You will see that a message has been deleted, and a status changed. Let's explore this in more detail so you understand what happened.
 
   .step(data-title='How to retrieve and modify message history - 2', data-file='../retrieve-modify.js', data-highlight='19-31')
     :markdown
@@ -334,7 +366,15 @@ style.
     :markdown
       ## Replying to an SMS Message
 
-      Create a file called `receive-reply.js` using all the contents to the right.
+      Create a file called `receive-reply.js` using all the contents to the right. Then run the script:
+
+      ```
+      $ node receive-reply.js
+      ```
+
+      This script will start and then wait until an SMS is received. Let's trigger the app to send an SMS in reply to one we send. Send an SMS from your personal phone to the phone number you set `RINGCENTRAL_USERNAME` to. You should shortly receive an auto-response to your phone.
+
+      Here is how it works...
 
       ### Create a Handler
 
@@ -360,3 +400,7 @@ style.
       The subscription we created above uses [PubNub](https://www.pubnub.com/).
 
       There is also a [WebHook way to do subscription](http://ringcentral-api-docs.readthedocs.io/en/latest/notifications_webhooks/). We won't dive into detail here. You can click the link to read more.
+
+      ## Congratulations!
+
+      And that's it. You should have successfully build a number of the components of an SMS application.
