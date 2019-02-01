@@ -5,6 +5,7 @@
   "description": "A quickstart tutorial to teach users to use RingCentral SMS API.",
   "scripts": {
     "build": "cd docs && ../node_modules/.bin/saurus author",
+    "docs": "cd docs && npx saurus author",
     "upgrade": "yarn-upgrade-all"
   },
   "dependencies": {

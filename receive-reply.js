@@ -16,8 +16,7 @@ platform.login({
   extension: process.env.RINGCENTRAL_EXTENSION,
   password: process.env.RINGCENTRAL_PASSWORD
 }).then(response => {
-  const subscription = rcsdk.createSubscription()
-  subscription.on(subscription.events.notification, function (msg) {
+  var handler = function (msg) {
     console.log(msg)
     platform.post('/account/~/extension/~/sms', {
       from: { phoneNumber: process.env.RINGCENTRAL_USERNAME },
@@ -30,8 +29,11 @@ platform.login({
     }).catch(e => {
       console.error(e)
     })
-  })
-  subscription.setEventFilters(['/account/~/extension/~/message-store/instant?type=SMS'])
+  }
+  const subscription = rcsdk.createSubscription()
+  subscription.on(subscription.events.notification, handler)
+  subscription
+    .setEventFilters(['/account/~/extension/~/message-store/instant?type=SMS'])
     .register().then(response => {
       console.log(response.json())
     })

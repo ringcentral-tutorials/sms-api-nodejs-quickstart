@@ -9,96 +9,252 @@
 .wrapper {
   height:100%;
   width:100%;
-}</style><link rel="shortcut icon" href="https://developers.ringcentral.com/assets/images/favicon.ico?v=20161209-1544"><link rel="apple-touch-icon" href="https://developers.ringcentral.com/assets/images/favicon.ico?v=20161209-1544"><link rel="apple-touch-icon" sizes="72x72" href="https://developers.ringcentral.com/assets/images/favicon.ico?v=20161209-1544"><link rel="apple-touch-icon" sizes="114x114" href="https://developers.ringcentral.com/assets/images/favicon.ico?v=20161209-1544"><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/jquery-ui@1.12.1/themes/base/all.css"><link rel="stylesheet" href="viewsaurus.css"></head><body><div class="wrapper"><div class="dpw-header-container"><div class="dpw-header center-section"><div class="logo"><a href="https://developers.ringcentral.com" class="logo-link"></a></div><div class="nav-top-menus"></div><div class="dpw-login-section"><a href="https://developer.ringcentral.com/login.html#/">Sign in | Sign up</a></div></div></div><div id="viewsaurus" data-title="SMS API Node.js Quickstart"><div class="saurus-panes"><div class="saurus-panes-header"><a href="https://ringcentral.github.io/tutorials/" class="saurus-back-to-tutorials">Tutorials</a><span>&gt;</span><span>SMS API Node.js Quickstart</span></div><div class="saurus-prose"><div class="saurus-nav-buttons"><div class="saurus-nav-button nav-overview"><div class="saurus-nav-button-inner"><i class="fa fa-fw icon-menu"></i></div><div class="nav-divider"></div></div><div class="saurus-nav-button nav-previous"><div class="saurus-nav-button-inner"><a href=""> <i class="fa fa-fw fa-play fa-rotate-180"></i></a></div><div class="nav-divider"></div></div><div class="saurus-nav-button nav-next clickable"><div class="saurus-nav-button-inner"><a href="#1"> <i class="fa fa-fw fa-play"></i></a></div></div><div class="saurus-next-title"><span class="next-title-inner"></span></div></div><div class="saurus-progress-bar"></div><div class="saurus-start"><p>A quickstart tutorial to teach users to use RingCentral SMS API. Click the &quot;Start&quot; button below to start the tutorial.</p><a href="#0">Start Tutorial</a></div><div class="saurus-content"><div data-title="SMS API Node.js Quickstart" class="chapter"><div data-title="Welcome!" data-file="../README.MD" class="step"><h2>Welcome to SMS API Node.js Quickstart</h2><p>This is a quickstart tutorial to teach users to use RingCentral SMS API.</p><p>The tutorial's navigation controls are located above this text. Use <i class="fa fa-fw fa-play"></i> to move to the next step of the tutorial. Use <i class="fa fa-fw fa-play fa-rotate-180"></i> to move to the previous step of the tutorial (if there is one). Use <i class="fa fa-fw fa-list"></i> to see an overview of all the steps in the tutorial.</p></div><div data-title="Environment Variables" data-file="../.env.sample" class="step"><h2 id="environment-variables">Environment Variables</h2>
-<p>The first file we&#39;ll look at is <code>.env.sample</code>. This contains all the environment variables we used in this tutorial. You need to follow its sample to create <code>.env</code> file which contains real RingCentral credentials.</p>
-<p>Most of the environment variables are quite self-explanatory except the last one: <code>RINGCENTRAL_RECEIVER</code>. It means the number to receive SMS. You can set it to your own mobile phone number so that you can confirm the receipt of SMS.</p>
-</div></div><div data-title="Send SMS" class="chapter"><div data-title="Send SMS - 1" data-file="../send-sms.js" class="step"><h2 id="send-sms-1">Send SMS - 1</h2>
-<hr>
-<h4 id="create-file-send-sms-js-for-sms-sending">Create file <code>send-sms.js</code> for SMS sending</h4>
-</div><div data-title="Send SMS - 2" data-file="../send-sms.js" data-highlight="2-4" class="step"><h2 id="send-sms-2">Send SMS - 2</h2>
-<hr>
-<h4 id="load-environment-variables-from-env-file">Load environment variables from <code>.env</code> file</h4>
-</div><div data-title="Send SMS - 3" data-file="../send-sms.js" data-highlight="6-10" class="step"><h2 id="send-sms-3">Send SMS - 3</h2>
-<hr>
-<h4 id="initialize-ringcentral-sdk">Initialize RingCentral SDK</h4>
-</div><div data-title="Send SMS - 4" data-file="../send-sms.js" data-highlight="14-18" class="step"><h2 id="send-sms-4">Send SMS - 4</h2>
-<hr>
-<h4 id="login-via-password">Login via password</h4>
-</div><div data-title="Send SMS - 5" data-file="../send-sms.js" data-highlight="19-25" class="step"><h2 id="send-sms-5">Send SMS - 5</h2>
-<hr>
-<h4 id="send-sms">Send SMS</h4>
-</div><div data-title="Send SMS - 6" data-file="../send-sms.js" data-highlight="26-26" class="step"><h2 id="send-sms-6">Send SMS - 6</h2>
-<hr>
-<h4 id="print-sms-id">Print SMS id</h4>
-</div></div><div data-title="Send MMS" class="chapter"><div data-title="Send MMS - 1" data-file="../send-mms.js" class="step"><h2 id="send-mms-1">Send MMS - 1</h2>
-<hr>
-<h4 id="create-file-send-mms-js-for-mms-sending">Create file <code>send-mms.js</code> for MMS sending</h4>
-</div><div data-title="Send MMS - 2" data-file="../send-mms.js" data-highlight="20-20" class="step"><h2 id="send-mms-2">Send MMS - 2</h2>
-<hr>
-<h4 id="create-a-new-formdata-object">Create a new FormData object</h4>
-</div><div data-title="Send MMS - 3" data-file="../send-mms.js" data-highlight="21-28" class="step"><h2 id="send-mms-3">Send MMS - 3</h2>
-<hr>
-<h4 id="add-request-body-to-formdata">Add request body to formData</h4>
-</div><div data-title="Send MMS - 4" data-file="../send-mms.js" data-highlight="29-29" class="step"><h2 id="send-mms-4">Send MMS - 4</h2>
-<hr>
-<h4 id="add-an-image-to-formdata">Add an image to formData</h4>
-</div><div data-title="Send MMS - 5" data-file="../send-mms.js" data-highlight="30-30" class="step"><h2 id="send-mms-5">Send MMS - 5</h2>
-<hr>
-<h4 id="send-the-mms">Send the MMS</h4>
-<h4 id="you-can-see-that-mms-and-sms-share-the-same-api-endpoint-account-extension-sms">You can see that MMS and SMS share the same API endpoint: <code>/account/~/extension/~/sms</code></h4>
-</div><div data-title="Send MMS - 6" data-file="../send-mms.js" data-highlight="31-31" class="step"><h2 id="send-mms-6">Send MMS - 6</h2>
-<hr>
-<h4 id="print-the-mms-id">Print the MMS id</h4>
-</div></div><div data-title="How to track delivery status of messages" class="chapter"><div data-title="How to track delivery status of messages - 1" data-file="../track-status.js" class="step"><h2 id="how-to-track-delivery-status-of-messages-1">How to track delivery status of messages - 1</h2>
-<hr>
-<h4 id="create-file-track-status-js-for-message-status-tracking-">Create file <code>track-status.js</code> for message status tracking.</h4>
-</div><div data-title="How to track delivery status of messages - 2" data-file="../track-status.js" data-highlight="27-29" class="step"><h2 id="how-to-track-delivery-status-of-messages-2">How to track delivery status of messages - 2</h2>
-<hr>
-<h4 id="if-everything-goes-well-code-highlighted-on-the-right-will-print-delivered-">If everything goes well, code highlighted on the right will print <code>Delivered</code>.</h4>
-</div></div><div data-title="How to retrieve and modify message history" class="chapter"><div data-title="How to retrieve and modify message history - 1" data-file="../retrieve-modify.js" class="step"><h2 id="how-to-retrieve-and-modify-message-history-1">How to retrieve and modify message history - 1</h2>
-<hr>
-<h4 id="create-file-retrieve-modify-js-for-retrieving-and-modifying-message-history-">Create file <code>retrieve-modify.js</code> for retrieving and modifying message history.</h4>
-</div><div data-title="How to retrieve and modify message history - 2" data-file="../retrieve-modify.js" data-highlight="19-22" class="step"><h2 id="how-to-retrieve-and-modify-message-history-2">How to retrieve and modify message history - 2</h2>
-<hr>
-<h4 id="get-the-list-of-messages-">Get the list of messages.</h4>
-</div><div data-title="How to retrieve and modify message history - 3" data-file="../retrieve-modify.js" data-highlight="20-20" class="step"><h2 id="how-to-retrieve-and-modify-message-history-3">How to retrieve and modify message history - 3</h2>
-<hr>
-<h4 id="here-we-set-the-parameter-datefrom-if-we-omit-it-its-value-will-by-default-be-set-to-24-hours-ago-">Here we set the parameter <code>dateFrom</code>, if we omit it, its value will by default be set to 24 hours ago.</h4>
-</div><div data-title="How to retrieve and modify message history - 4" data-file="../retrieve-modify.js" data-highlight="25-27" class="step"><h2 id="how-to-retrieve-and-modify-message-history-4">How to retrieve and modify message history - 4</h2>
-<hr>
-<h4 id="update-the-read-status-of-a-message-to-read-">Update the read status of a message to &quot;Read&quot;.</h4>
-</div><div data-title="How to retrieve and modify message history - 5" data-file="../retrieve-modify.js" data-highlight="31-33" class="step"><h2 id="how-to-retrieve-and-modify-message-history-5">How to retrieve and modify message history - 5</h2>
-<hr>
-<h4 id="delete-a-message">Delete a message</h4>
-</div></div><div data-title="How to receive and reply to SMS messages" class="chapter"><div data-title="How to receive and reply to SMS messages - 1" data-file="../receive-reply.js" class="step"><h2 id="how-to-receive-and-reply-to-sms-messages-1">How to receive and reply to SMS messages - 1</h2>
-<hr>
-<h4 id="create-file-receive-reply-js-for-receiving-and-replying-messages-">Create file <code>receive-reply.js</code> for receiving and replying messages.</h4>
-</div><div data-title="How to receive and reply to SMS messages - 2" data-file="../receive-reply.js" data-highlight="19-19" class="step"><h2 id="how-to-receive-and-reply-to-sms-messages-2">How to receive and reply to SMS messages - 2</h2>
-<hr>
-<h4 id="create-a-subscription">Create a subscription</h4>
-</div><div data-title="How to receive and reply to SMS messages - 3" data-file="../receive-reply.js" data-highlight="34-34" class="step"><h2 id="how-to-receive-and-reply-to-sms-messages-3">How to receive and reply to SMS messages - 3</h2>
-<hr>
-<h4 id="set-event-filters">Set event filters</h4>
-<p>For a full list of available event filters, please refer to <a href="https://developer.ringcentral.com/api-docs/latest/index.html#!#EventTypes.html">https://developer.ringcentral.com/api-docs/latest/index.html#!#EventTypes.html</a></p>
-</div><div data-title="How to receive and reply to SMS messages - 4" data-file="../receive-reply.js" data-highlight="20-33" class="step"><h2 id="how-to-receive-and-reply-to-sms-messages-4">How to receive and reply to SMS messages - 4</h2>
-<hr>
-<h4 id="handle-notification-messsages">Handle notification messsages</h4>
-<p>Here we just reply a message to the sender.</p>
-</div><div data-title="How to receive and reply to SMS messages - 5" data-file="../receive-reply.js" data-highlight="35-37" class="step"><h2 id="how-to-receive-and-reply-to-sms-messages-5">How to receive and reply to SMS messages - 5</h2>
-<hr>
-<h4 id="register-the-subscription">Register the subscription</h4>
-</div><div data-title="How to receive and reply to SMS messages - 6" data-file="../receive-reply.js" class="step"><h2 id="how-to-receive-and-reply-to-sms-messages-6">How to receive and reply to SMS messages - 6</h2>
-<hr>
-<h4 id="webhook">WebHook</h4>
+}</style><link rel="shortcut icon" href="https://developers.ringcentral.com/assets/images/favicon.ico?v=20161209-1544"><link rel="apple-touch-icon" href="https://developers.ringcentral.com/assets/images/favicon.ico?v=20161209-1544"><link rel="apple-touch-icon" sizes="72x72" href="https://developers.ringcentral.com/assets/images/favicon.ico?v=20161209-1544"><link rel="apple-touch-icon" sizes="114x114" href="https://developers.ringcentral.com/assets/images/favicon.ico?v=20161209-1544"><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/jquery-ui@1.12.1/themes/base/all.css"><link rel="stylesheet" href="viewsaurus.css"></head><body><div class="wrapper"><div class="dpw-header-container"><div class="dpw-header center-section"><div class="logo"><a href="https://developers.ringcentral.com" class="logo-link"></a></div><div class="nav-top-menus"></div><div class="dpw-login-section"><a href="https://developer.ringcentral.com/login.html#/">Sign in | Sign up</a></div></div></div><div id="viewsaurus" data-title="SMS API Node.js Quickstart"><div class="saurus-panes"><div class="saurus-panes-header"><a href="https://ringcentral.github.io/tutorials/" class="saurus-back-to-tutorials">Tutorials</a><span>&gt;</span><span>SMS API Node.js Quickstart</span></div><div class="saurus-prose"><div class="saurus-nav-buttons"><div class="saurus-nav-button nav-overview"><div class="saurus-nav-button-inner"><i class="fa fa-fw icon-menu"></i></div><div class="nav-divider"></div></div><div class="saurus-nav-button nav-previous"><div class="saurus-nav-button-inner"><a href=""> <i class="fa fa-fw fa-play fa-rotate-180"></i></a></div><div class="nav-divider"></div></div><div class="saurus-nav-button nav-next clickable"><div class="saurus-nav-button-inner"><a href="#1"> <i class="fa fa-fw fa-play"></i></a></div></div><div class="saurus-next-title"><span class="next-title-inner"></span></div></div><div class="saurus-progress-bar"></div><div class="saurus-start"><p>A quickstart tutorial to teach users to use RingCentral SMS API. Click the &quot;Start&quot; button below to start the tutorial.</p><a href="#0">Start Tutorial</a></div><div class="saurus-content"><style>ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+ol { 
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+#viewsaurus menu, #viewsaurus ol, #viewsaurus ul {
+    padding: 0 0 0 15px;
+}
+#viewsaurus .saurus-prose {
+  width: 40%;
+}
+#viewsaurus .saurus-code {
+  left: 40%;
+}
+</style><div data-title="SMS Application Walkthrough" class="chapter"><div data-title="Welcome!" data-file="../README.MD" class="step"><h2>Welcome to SMS Application Walk-through</h2><p>This walk-through of an SMS application will show you how to go about building a fully functional SMS application. In this walk-through you will learn:</p><ul><li>How to setup your repository to work with multiple environments.</li><li>How to send a simple SMS.</li><li>How to send a image in an SMS message, a.k.a. "MMS."</li><li>How to track the delivery state of a message.</li><li>How to modify the message history.</li><li>How to reply to an SMS message. </li></ul><h3>Using this Walk-through</h3><p>Navigation controls are located above this text. Use <i class="fa fa-fw fa-play"></i> to move to the next step of the tutorial. Use <i class="fa fa-fw fa-play fa-rotate-180"></i> to move to the previous step of the tutorial (if there is one). Use <i class="fa fa-fw fa-list"></i> to see an overview of all the steps in the tutorial.</p></div><div data-title="Setup Your Project" data-file="../package.json" class="step"><h2 id="create-a-project">Create a Project</h2>
+<p>Let&#39;s begin where every new software project begins: setting up your local development environment and preparing your workspace to code. In node, we do this by creating a directory to hold our project files. The first file we create is our <code>package.json</code> file which defines our project name, and our dependencies. Create this file using the contents to the right.</p>
+<p>Then, go to the command line, and install your prerequisites.</p>
+<pre><code>$ yarn install
+</code></pre><p><em>Note</em>: You may choose to edit this file to remove dependencies specific to this tutorial. Feel free to remove:</p>
+<ul>
+<li>The <code>build</code> and <code>docs</code> elements from <code>scripts</code>.</li>
+<li>The <code>viewsaurus-ringcentral</code> element from <code>devDependencies</code>.</li>
+</ul>
+</div><div data-title="Create Your App" data-file="../.env.sample" class="step"><h2 id="creating-an-application">Creating an Application</h2>
+<p>Now, let&#39;s setup RingCentral and your environment. </p>
+<p>The first step is to login to the RingCentral Developer Portal, and create an app. You can do this easily by clicking the button/link below, and then clicking the &quot;Create&quot; button.</p>
+<p><em>Don&#39;t worry, we will come back late and set the Redirect and Callback URIs.</em></p>
+<p><a href="https://developer.ringcentral.com/new-app?name=Sample+SMS+App&amp;desc=A+sample+app+created+by+the+SMS+App+Walk-through&amp;public=false&amp;type=ServerOther&amp;carriers=7710,7310,3420&amp;permissions=SMS,ReadMessages&amp;redirectUri=">Create SMS App &raquo;</a></p>
+<p>After creating the app, you will be taken to the app&#39;s dashboard. Make note of the following, as we will be using this in setting up your environment:</p>
+<ul>
+<li>Client ID</li>
+<li>Client Secret</li>
+<li>Account Phone Number</li>
+</ul>
+</div><div data-title="Setup Your Environments" data-file="../.env.sample" class="step"><h2 id="create-your-env-file">Create Your .env File</h2>
+<p>The ability to create a single software package that can be easily deployed to any environment is a modern-day essential. Therefore, we will begin with this fundamental setup, by placing all of our environment specific variables in a config file (of sorts). </p>
+<p>Create a copy of the provided <code>.env.sample</code> file and name it <code>.env</code>. Edit this new file and enter in the various variables accordingly.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Help/Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>RINGCENTRAL_CLIENT_ID</code></td>
+<td>Enter in the Client ID provided to you after creating your application.</td>
+</tr>
+<tr>
+<td><code>RINGCENTRAL_CLIENT_SECRET</code></td>
+<td>Enter in the Client Secret provided to you after creating your application.</td>
+</tr>
+<tr>
+<td><code>RINGCENTRAL_USERNAME</code></td>
+<td>Enter the <strong>phone number</strong> provisioned to you when you setup your RingCentral account. If you choose to use your company&#39;s phone number, rather than your direct line, then you will also need to specify an extension below.</td>
+</tr>
+<tr>
+<td><code>RINGCENTRAL_EXTENSION</code></td>
+<td>Enter the extension corresponding to the user who will authenticate into the app. This is not necessary if you used your direct line number above.</td>
+</tr>
+<tr>
+<td><code>RINGCENTRAL_PASSWORD</code></td>
+<td>Enter in the password you specified when you created your RingCentral account.</td>
+</tr>
+<tr>
+<td><code>RINGCENTRAL_RECEIVER</code></td>
+<td>Enter in any phone number you would like to receive an SMS. Obviously you may want to move this variable outside of the environment and bind it to a customer phone number or something else.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="multiple-env-files">Multiple .env Files</h3>
+<p>Placing the variables in a <code>.env</code> file will make it much easier down the road when you need to deploy the same code base to production. In fact, you might have a different configuration for your QA and/or staging environments. Create as many <code>.env</code> files as you need. </p>
+</div></div><div data-title="Sending an SMS" class="chapter"><div data-title="Sending an SMS" data-file="../send-sms.js" class="step"><h2 id="sending-an-sms">Sending an SMS</h2>
+<p>First, let&#39;s create a file called <code>send-sms.js</code> and place within it the code to the right. This script will work right out of the box. But let&#39;s walk-through what we just created so that you understand what is going on, and customize it to your needs. </p>
+</div><div data-title="Sending an SMS: Initialization" data-file="../send-sms.js" data-highlight="2-12" class="step"><h2 id="initializing-the-client">Initializing the Client</h2>
+<p>The first thing we do is load the environment variables within the <code>.env</code> file you created in the previous step. Then using those variables, we instantiate a new javascript client.</p>
+</div><div data-title="Sending an SMS: Auth" data-file="../send-sms.js" data-highlight="14-17" class="step"><h2 id="authentication">Authentication</h2>
+<p>Before making any call to the RingCentral API, one must authenticate their client. In this sample application we are authenticating using our own username and password. That means the SMS we send, will appear to the recipient to be sent from us - or the phone number used when we authenticated to the API. Depending upon your requirements your application may want to use OAuth to capture the credentials of another user and send an SMS on their behalf. For this scenario however, we are going to keep things simple and leave well enough alone.</p>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<p>It is not uncommon for developers to need additional help when authenticating for the first time. If you have trouble, check the list below for help.</p>
+<ul>
+<li><p><strong>Are you authenticating using a personal phone number?</strong></p>
+<p>Bear in mind that the <code>RINGCENTRAL_USERNAME</code> environment variable should point to a RingCentral phone number, not your personal phone number. </p>
+</li>
+<li><p><strong>Are you authenticating using your company phone number?</strong></p>
+<p>If you authenticating using your company&#39;s main phone number, then you must also specify your user&#39;s phone extension in order to properly identify your account specifically. You do not need to specify an extension if you are authenticating using your direct line. </p>
+</li>
+</ul>
+</div><div data-title="Sending an SMS: Doing the Deed" data-file="../send-sms.js" data-highlight="19-24" class="step"><h2 id="send-an-sms">Send an SMS</h2>
+<p>After authentication, the <code>platform</code> object has now been seeded with an authorization token allowing you to access all the APIs your application has permission to use. So now, it&#39;s time to send an SMS. The API allows you to identify:</p>
+<ul>
+<li>the sender</li>
+<li>one or more receipients</li>
+<li>the message to send</li>
+</ul>
+<h3 id="sms-sending-numbers">SMS Sending Numbers</h3>
+<p>The phone number used to identify the sender of the message must have permission or the authority to send an SMS. To determine which phone numbers a user can use to send and receive SMS, retrieve the user&#39;s list of phone numbers from the extension/phone-number endpoint and then filter that list by numbers with the <code>SmsSender</code> feature. A user record might look like the below. Note the <code>features</code> element which identified if the corresponding phone number can send an SMS. </p>
+<pre><code>{
+  &quot;uri&quot;:&quot;https://platform.ringcentral.com/restapi/v1.0/account/11111111/extension/22222222/phone-number?page=1&amp;perPage=100&quot;,
+  &quot;records&quot;:[{
+    &quot;id&quot;:33333333,
+    &quot;phoneNumber&quot;:&quot;+16505551212&quot;,
+    &quot;paymentType&quot;:&quot;Local&quot;,
+    &quot;type&quot;:&quot;VoiceFax&quot;,
+    &quot;usageType&quot;:&quot;DirectNumber&quot;,
+    &quot;features&quot;:[
+      &quot;SmsSender&quot;,
+      &quot;CallerId&quot;
+    ],
+    &quot;status&quot;:&quot;Normal&quot;,
+    &quot;country&quot;:{
+      &quot;uri&quot;:&quot;https://platform.devtest.ringcentral.com/restapi/v1.0/dictionary/country/1&quot;,
+      &quot;id&quot;:&quot;1&quot;,
+      &quot;name&quot;:&quot;United States&quot;
+    }
+  }]
+}
+</code></pre></div><div data-title="Sending an SMS: The Response" data-file="../send-sms.js" data-highlight="25-29" class="step"><h2 id="processing-the-response">Processing the Response</h2>
+<p>Upon successfully sending the SMS, you may want to take additional action. For example, you may want to log that the SMS was sent as shown in this sample application. Other things you may want to do:</p>
+<ul>
+<li>Register the SMS being sent within an analytics system.</li>
+<li>Update a status record in your database.</li>
+<li>Etc.</li>
+</ul>
+<p>If an error occurs in this step, it will be caught and handled on line 28.</p>
+<h3 id="sample-response">Sample Response</h3>
+<pre><code>{
+  &quot;uri&quot; : &quot;https://platform.ringcentral.com/account/1346632010/extension/1346632010/message-store/315450330010&quot;,
+  &quot;id&quot; : 315450330010,
+  &quot;to&quot; : [ {
+    &quot;phoneNumber&quot; : &quot;+18551003738&quot;
+  } ],
+  &quot;from&quot; : {
+    &quot;phoneNumber&quot; : &quot;+18559100010&quot;
+  },
+  &quot;type&quot; : &quot;SMS&quot;,
+  &quot;creationTime&quot; : &quot;2012-09-13T15:21:08.000Z&quot;,
+  &quot;readStatus&quot; : &quot;Unread&quot;,
+  &quot;priority&quot; : &quot;Normal&quot;,
+  &quot;attachments&quot; : [ {
+    &quot;id&quot; : 1,
+    &quot;uri&quot; : &quot;https://platform.ringcentral.com/account/1346632010/extension/1346632010/message-store/315450330010/content/1&quot;,
+    &quot;contentType&quot; : &quot;text/plain&quot;
+  } ],
+  &quot;direction&quot; : &quot;Outbound&quot;,
+  &quot;availability&quot; : &quot;Alive&quot;,
+  &quot;subject&quot; : &quot;Test SMS message from Platform server&quot;,
+  &quot;messageStatus&quot; : &quot;Sent&quot;,
+  &quot;conversationId&quot; : 4481650717038104652,
+  &quot;lastModifiedTime&quot; : &quot;2012-09-13T15:21:09.000Z&quot;
+}
+</code></pre><h3 id="up-next">Up Next</h3>
+<p>Next we will learn how to send an image in an SMS message. </p>
+</div></div><div data-title="Sending an Image" class="chapter"><div data-title="Sending an Image" data-file="../send-mms.js" class="step"><h2 id="sending-an-image">Sending an Image</h2>
+<p>Just as we did before, let&#39;s create a new file called <code>semd-mms.js</code> using the contents to the right. Next we will walk through this file to highlight the key differences from sending a purely text message. </p>
+</div><div data-title="Sending an Image: FormData" data-file="../send-mms.js" data-highlight="3,20" class="step"><h2 id="loading-formdata">Loading FormData</h2>
+<p>The FormData library is used to read files from the file system and attach them to your SMS message. This library is already declared in your <code>package.json</code> and was installed earlier when you ran the command:</p>
+<pre><code>$ yarn install
+</code></pre><h4 id="create-a-new-formdata-object">Create a new FormData object</h4>
+</div><div data-title="Sending an Image: Attachments" data-file="../send-mms.js" data-highlight="21-37" class="step"><h2 id="creating-the-attachments">Creating the Attachments</h2>
+<p>To send an image, we need to package the text message and image file as attachments.</p>
+<h3 id="attaching-the-text-message">Attaching the Text Message</h3>
+<p>The text message is the first attachment we make, and we attach the file as <code>application/json</code>.</p>
+<h3 id="attaching-the-image">Attaching the Image</h3>
+<p>We then attach the image by reading it off of the file system.</p>
+<h3 id="sending-the-message">Sending the Message</h3>
+<p>Finally, we transmit the message.</p>
+<h3 id="next-up">Next Up</h3>
+<p>Next we will learn how to track the delivery status of a message.</p>
+</div></div><div data-title="Tracking delivery status" class="chapter"><div data-title="Tracking the delivery status of a message" data-file="../track-status.js" class="step"><h2 id="how-to-track-delivery-status-of-message">How to track delivery status of message</h2>
+<p>Once a message has been sent, you can check to see if it was successfully delivered. In this example, you will see how the basic structure of the script mirrors that of the previous examples. We initialize the client, authenticate, and so forth. Let&#39;s begin as before: create a new file called <code>track-status.js</code> using the contents to the right. </p>
+</div><div data-title="Delivery Status" data-file="../track-status.js" data-highlight="26-29" class="step"><h2 id="checking-the-status">Checking the Status</h2>
+<p>This script is closely related to our first, &#39;send-sms.js`, except this script performs an additional step after the message is sent. </p>
+<h3 id="display-its-status">Display its Status</h3>
+<p>We retrieve the message ID returned to us when we sent the message. We then use that message ID when we place a call to the <code>message-store</code> endpoint. A typical response will look something like this:</p>
+<pre><code>{
+  &quot;uri&quot; : &quot;https://platform.ringcentral.com/restapi/v1.0/account/12502999004/extension/12502999004/message-store/60279564004&quot;,
+  &quot;id&quot; : 60279564004,
+  &quot;to&quot; : [ {
+    &quot;phoneNumber&quot; : &quot;+16505393204&quot;,
+    &quot;location&quot; : &quot;San Mateo, CA&quot;
+  } ],
+  &quot;from&quot; : {
+    &quot;phoneNumber&quot; : &quot;+18889450052&quot;
+  },
+  &quot;type&quot; : &quot;SMS&quot;,
+  &quot;creationTime&quot; : &quot;2015-02-18T13:24:50.000Z&quot;,
+  &quot;readStatus&quot; : &quot;Read&quot;,
+  &quot;priority&quot; : &quot;Normal&quot;,
+  &quot;attachments&quot; : [ {
+    &quot;id&quot; : 60279564004,
+    &quot;uri&quot; : &quot;https://platform.ringcentral.com/restapi/v1.0/account/12502999004/extension/12502999004/message-store/60279564004/content/60279564004&quot;,
+    &quot;type&quot; : &quot;Text&quot;,
+    &quot;contentType&quot; : &quot;text/plain&quot;
+  } ],
+  &quot;direction&quot; : &quot;Outbound&quot;,
+  &quot;availability&quot; : &quot;Alive&quot;,
+  &quot;subject&quot; : &quot;Flight information&quot;,
+  &quot;messageStatus&quot; : &quot;Sent&quot;,
+  &quot;smsSendingAttemptsCount&quot; : 1,
+  &quot;conversationId&quot; : 5578984350117917661,
+  &quot;lastModifiedTime&quot; : &quot;2015-02-18T13:24:50.300Z&quot;
+}
+</code></pre><p>If the message was sent properly, then the text &quot;Delivered&quot; will be printed to the console. </p>
+<h3 id="up-next">Up Next</h3>
+<p>Next we will learn how to modify your message history.</p>
+</div></div><div data-title="Message Histories" class="chapter"><div data-title="Modifying the Message History" data-file="../retrieve-modify.js" class="step"><h2 id="message-histories">Message Histories</h2>
+<p>Create a file called <code>retrieve-modify.js</code> using the contents to the right. </p>
+</div><div data-title="How to retrieve and modify message history - 2" data-file="../retrieve-modify.js" data-highlight="19-31" class="step"><h2 id="retrieve-and-modify-the-message-history">Retrieve and Modify the Message History</h2>
+<h3 id="retrieve-the-list">Retrieve the List</h3>
+<p>In this example, we retrieve a list of messages and pick the first one in the list to modify. In your application, you almost certainly will rely on different logic, but the basic pattern is the same. Here we retrieve a list of messages sent after a specific date. Then we just arbitrarily choose the first message returned to us. </p>
+<h3 id="update-message-status">Update Message Status</h3>
+<p>Next, we update the record using HTTP <code>PUT</code>. We transmit only the properties we want to change. In this case, we set <code>readStatus</code> to &quot;Read&quot; and then visually confirm that the status was changed by outputting the status returned to us in the response. </p>
+</div><div data-title="Delete a Message" data-file="../retrieve-modify.js" data-highlight="32-36" class="step"><h2 id="deleting-a-message">Deleting a Message</h2>
+<p>Deleting a message is done via the HTTP <code>DELETE</code> method.</p>
+<h3 id="next-up">Next Up</h3>
+<p>Next, we will learn how to respond to an SMS message that we receive. </p>
+</div></div><div data-title="Replying to SMS messages" class="chapter"><div data-title="Replying to SMS messages" data-file="../receive-reply.js" data-highlight="19-32" class="step"><h2 id="replying-to-an-sms-message">Replying to an SMS Message</h2>
+<p>Create a file called <code>receive-reply.js</code> using all the contents to the right.</p>
+<h3 id="create-a-handler">Create a Handler</h3>
+<p>First, we create a function to send the auto-response. This function will receive as input the message that we will be responding to. We use this message to set the receipint of our response. </p>
+</div><div data-title="Replying to SMS messages" data-file="../receive-reply.js" data-highlight="33-39" class="step"><h2 id="creating-an-event-subscription">Creating an Event Subscription</h2>
+<p>Once the handler has been created, we need to bind it to the receipt of an SMS message. We do that by:</p>
+<ul>
+<li>Create a subscription object</li>
+<li>Listen for the <code>subscription.events.notification</code> event, and bind it to our handler. </li>
+<li>Set the event filter to the receipt of SMS message specifically.</li>
+<li>Register the subscription.</li>
+</ul>
+<h3 id="event-filters">Event Filters</h3>
+<p>For a full list of available event filters, please refer to our <a href="https://developer.ringcentral.com/api-docs/latest/index.html#!#EventTypes.html">API Reference</a>.</p>
+<h3 id="webhook">WebHook</h3>
 <p>The subscription we created above uses <a href="https://www.pubnub.com/">PubNub</a>.</p>
 <p>There is also a <a href="http://ringcentral-api-docs.readthedocs.io/en/latest/notifications_webhooks/">WebHook way to do subscription</a>. We won&#39;t dive into detail here. You can click the link to read more.</p>
 </div></div>
-<div class="saurus-files" style="display:none;"><textarea class="saurus-file" data-file="../README.MD" data-mode="markdown">IyBTTVMgQVBJIE5vZGUuanMgUXVpY2tzdGFydAoKQSBxdWlja3N0YXJ0IHR1dG9yaWFsIHRvIHRlYWNoIHVzZXJzIHRvIHVzZSBSaW5nQ2VudHJhbCBTTVMgQVBJLiBUaGUgZm9sbG93aW5nIHRvcGljcyBhcmUgaW5jbHVkZWQ6CgotIEhvdyB0byBzZW5kIFNNUwotIEhvdyB0byBzZW5kIE1NUwotIEhvdyB0byB0cmFjayBkZWxpdmVyeSBzdGF0dXMgb2YgbWVzc2FnZXMKLSBIb3cgdG8gcmV0cmlldmUgYW5kIG1vZGlmeSBtZXNzYWdlIGhpc3RvcnkKLSBIb3cgdG8gcmVjZWl2ZSBhbmQgcmVwbHkgdG8gU01TIG1lc3NhZ2VzCg==</textarea>
-<textarea class="saurus-file" data-file="../.env.sample" data-mode="text">UklOR0NFTlRSQUxfQ0xJRU5UX0lEPQpSSU5HQ0VOVFJBTF9DTElFTlRfU0VDUkVUPQpSSU5HQ0VOVFJBTF9TRVJWRVJfVVJMPWh0dHBzOi8vcGxhdGZvcm0uZGV2dGVzdC5yaW5nY2VudHJhbC5jb20KUklOR0NFTlRSQUxfVVNFUk5BTUU9ClJJTkdDRU5UUkFMX0VYVEVOU0lPTj0KUklOR0NFTlRSQUxfUEFTU1dPUkQ9ClJJTkdDRU5UUkFMX1JFQ0VJVkVSPQo=</textarea>
+<div class="saurus-files" style="display:none;"><textarea class="saurus-file" data-file="../README.MD" data-mode="markdown">IyBTTVMgQXBwbGljYXRpb24gV2Fsay10aHJvdWdoCgpXZWxjb21lIHRvIHRoZSBTTVMgQXBwbGljYXRpb24gV2Fsay10aHJvdWdoIGFuZCB0b3VyIG9mIGEgZnVsbHkgZnVuY3Rpb25hbCBTTVMgYXBwbGljYXRpb24gcG93ZXJlZCBieSBSaW5nQ2VudHJhbC4gSW4gdGhpcyB3YWxrIHRocm91Z2ggeW91IHdpbGwgbGVhcm46CgoqIEhvdyB0byBzZXR1cCB5b3VyIHJlcG9zaXRvcnkgdG8gd29yayB3aXRoIG11bHRpcGxlIGVudmlyb25tZW50cy4KKiBIb3cgdG8gc2VuZCBhIHNpbXBsZSBTTVMuCiogSG93IHRvIHNlbmQgYSBpbWFnZSBpbiBhbiBTTVMgbWVzc2FnZSwgYS5rLmEuICJNTVMuIgoqIEhvdyB0byB0cmFjayB0aGUgZGVsaXZlcnkgc3RhdGUgb2YgYSBtZXNzYWdlLgoqIEhvdyB0byBtb2RpZnkgdGhlIG1lc3NhZ2UgaGlzdG9yeS4KKiBIb3cgdG8gcmVwbHkgdG8gYW4gU01TIG1lc3NhZ2UuIAoKIyMgU2V0dXAgYW5kIEluc3RhbGxhdGlvbgoKKipQcmVyZXF1aXNpdGVzKioKCi0gTm9kZS5qcyA+PSA4LjEwCi0gWWFybgoKIyMjIFNldHVwIHRoZSBQcm9qZWN0CgpgYGAKZ2l0IGNsb25lIGdpdEBnaXRodWIuY29tOnJpbmdjZW50cmFsLXR1dG9yaWFscy9zbXMtYXBpLW5vZGVqcy1xdWlja3N0YXJ0LmdpdApjZCBzbXMtYXBpLW5vZGVqcy1xdWlja3N0YXJ0Cnlhcm4gaW5zdGFsbApgYGAKCiMjIyBDcmVhdGUgWW91ciBQcm94eQoKSWYgeW91IGFyZSBkZXZlbG9waW5nIG9uIHlvdXIgbG9jYWwgbWFjaGluZSwgeW91IG1heSBuZWVkIHRvIGNyZWF0ZSBhIHByb3h5L3R1bm5lbCB0byB0aGUgb3V0c2lkZSB3b3JsZCBzbyB0aGF0IHlvdXIgYm90IGNhbiByZWNlaXZlIHdlYmhvb2tzIHByb3Blcmx5LiBZb3UgY2FuIGRvIHRoaXMgZWFzaWx5IGJ5IGV4ZWN1dGluZyB0aGUgZm9sbG93aW5nIGNvbW1hbmQgaW4gYSBzZXBhcmF0ZSB0ZXJtaW5hbDoKCmBgYApjZCBzbXMtYXBpLW5vZGVqcy1xdWlja3N0YXJ0Cnlhcm4gcHJveHkKYGBgCgoqTWFrZSBub3RlIG9mIHRoZSBuZ3JvayBIVFRQUyBVUkwgZm9yIHVzZSBsYXRlci4qCgojIyMgQ3JlYXRlIFlvdXIgU01TIEFwcAoKT25jZSB5b3UgaGF2ZSBhIGxvY2FsIHNlcnZlciBydW5uaW5nLCB5b3UgbmVlZCB0byBjcmVhdGUgYW4gQXBwIGluc2lkZSBvZiBSaW5nQ2VudHJhbC4gVGhpcyBjYW4gYmUgZG9uZSBlYXNpbHkgYnkgY2xpY2tpbmcgdGhlIGxpbmsvYnV0dG9uIGJlbG93OgoKPGEgdGFyZ2V0PSJfbmV3IiBocmVmPSJodHRwczovL2RldmVsb3Blci5yaW5nY2VudHJhbC5jb20vbmV3LWFwcD9uYW1lPVNhbXBsZStTTVMrQXBwJmRlc2M9QStzYW1wbGUrYXBwK2NyZWF0ZWQrYnkrdGhlK1NNUytBcHArV2Fsay10aHJvdWdoJnB1YmxpYz1mYWxzZSZ0eXBlPVNlcnZlck90aGVyJmNhcnJpZXJzPTc3MTAsNzMxMCwzNDIwJnBlcm1pc3Npb25zPVNNUyxSZWFkTWVzc2FnZXMmcmVkaXJlY3RVcmk9IiBjbGFzcz0iYnRuIGJ0bi1wcmltYXJ5Ij5DcmVhdGUgU01TIEFwcDwvYT4KCkFmdGVyIGNsaWNraW5nIHRoZSBsaW5rIGFib3ZlLCB5b3Ugd2lsbCBoYXZlIHRoZSBvcHBvcnR1bml0eSB0byBlbnRlciBpbiB5b3VyIENhbGxiYWNrIFVSTC4gRW50ZXIgaW4gdGhlIFVSTCB0aGF0IHdhcyBjcmVhdGVkIGZvciBtZSB3aGVuIHlvdSBzZXR1cCB5b3VyIGxvY2FsIHByb3h5IHZpYSBuZ3Jvay4KCiMjIENvbnRyaWJ1dGluZwoKVGhpcyByZXBvc2l0b3J5IGlzIG5vdCBvbmx5IGEgZnVsbHkgZnVuY3Rpb25hbCBhcHBsaWNhdGlvbiwgYnV0IGFsc28gYSB0dXRvcmlhbCB0aGF0IGNhbiBiZSB2aWV3ZWQgb25saW5lIGF0IGh0dHBzOi8vcmluZ2NlbnRyYWwtdHV0b3JpYWxzLmdpdGh1Yi5pby9zbXMtYXBpLW5vZGVqcy1xdWlja3N0YXJ0Ly4gSWYgeW91IHdvdWxkIGxpa2UgdG8gY29udHJpYnV0ZSB0byB0aGUgZG9jdW1lbnRhdGlvbiBlZmZvcnQsIGNsb25lIHRoaXMgcmVwb3NpdG9yeSBhbmQgcnVuIHRoZSBkb2N1bWVudGF0aW9uIHNlcnZlciBsb2NhbGx5IHZpYSB0aGUgZm9sbG93aW5nIGNvbW1hbmRzOgoKYGBgCiQgeWFybiBpbnN0YWxsCiQgeWFybiBkb2NzCmBgYAoKVGhlbiB2aXNpdCBodHRwOi8vbG9jYWxob3N0Ojg4ODggdG8gcmVhZCB0aGlzIHR1dG9yaWFsIGxvY2FsbHkuCgpZb3UgY2FuIGVkaXQgZG9jcy90dXRvcmlhbC9pbmRleC5qYWRlIGFuZCByZWZyZXNoIGh0dHA6Ly9sb2NhbGhvc3Q6ODg4OCB0byBzZWUgeW91ciBjaGFuZ2VzLgoK</textarea>
+<textarea class="saurus-file" data-file="../package.json" data-mode="json">ewogICJuYW1lIjogInNtcy1hcGktbm9kZWpzLXF1aWNrc3RhcnQiLAogICJ2ZXJzaW9uIjogIjAuMS4wIiwKICAibGljZW5zZSI6ICJNSVQiLAogICJkZXNjcmlwdGlvbiI6ICJBIHF1aWNrc3RhcnQgdHV0b3JpYWwgdG8gdGVhY2ggdXNlcnMgdG8gdXNlIFJpbmdDZW50cmFsIFNNUyBBUEkuIiwKICAic2NyaXB0cyI6IHsKICAgICJidWlsZCI6ICJjZCBkb2NzICYmIC4uL25vZGVfbW9kdWxlcy8uYmluL3NhdXJ1cyBhdXRob3IiLAogICAgImRvY3MiOiAiY2QgZG9jcyAmJiBucHggc2F1cnVzIGF1dGhvciIsCiAgICAidXBncmFkZSI6ICJ5YXJuLXVwZ3JhZGUtYWxsIgogIH0sCiAgImRlcGVuZGVuY2llcyI6IHsKICAgICJkb3RlbnYiOiAiXjUuMC4xIiwKICAgICJmb3JtLWRhdGEiOiAiXjIuMy4yIiwKICAgICJyaW5nY2VudHJhbCI6ICJeMy4yLjAiCiAgfSwKICAiZGV2RGVwZW5kZW5jaWVzIjogewogICAgInN0YW5kYXJkIjogIl4xMS4wLjEiLAogICAgInZpZXdzYXVydXMtcmluZ2NlbnRyYWwiOiAiXjAuNC43IiwKICAgICJ5YXJuLXVwZ3JhZGUtYWxsIjogIl4wLjMuMCIKICB9Cn0K</textarea>
+<textarea class="saurus-file" data-file="../.env.sample" data-mode="text">IyBFbnZpcm9ubWVudCBWYXJpYWJsZXMgZm9yIFJpbmdDZW50cmFsCgojIFRoZSBDbGllbnQgSUQgb2YgdGhlIGFwcCAKUklOR0NFTlRSQUxfQ0xJRU5UX0lEPQoKIyBUaGUgQ2xpZW50IFNlY3JldCBvZiB0aGUgYXBwClJJTkdDRU5UUkFMX0NMSUVOVF9TRUNSRVQ9CgojIFRoZSBwaG9uZSBudW1iZXIgdXNlZCBieSB0aGUgZGV2ZWxvcGVyIHdoZW4gbG9nZ2luZyBpbnRvIFJpbmdDZW50cmFsLiBUaGlzIG51bWJlciB3aWxsIGJlCiMgZGlmZmVyZW50IGluIHNhbmRib3ggYW5kIHByb2R1Y3Rpb24uIFRoaXMgaXMgYWxzbyB0aGUgc2VuZGVyIG9mIHRoZSBtZXNzYWdlLgpSSU5HQ0VOVFJBTF9VU0VSTkFNRT0KCiMgVGhlIGV4dGVuc2lvbiB1c2VkIGJ5IHRoZSBkZXZlbG9wZXIgd2hlbiBsb2dnaW5nIGludG8gUmluZ0NlbnRyYWwuIFRoaXMgaXMgb25seSBuZWNlc3NhcnkgaWYKIyB0aGUgdXNlcm5hbWUvc2VuZGVyIGFib3ZlIGlzIHRoZSBjb21wYW55IHBob25lIG51bWVici4gClJJTkdDRU5UUkFMX0VYVEVOU0lPTj0KCiMgVGhlIHBhc3N3b3JkIHVzZWQgYnkgdGhlIGRldmVsb3BlciB3aGVuIGxvZ2dpbmcgaW50byBSaW5nQ2VudHJhbApSSU5HQ0VOVFJBTF9QQVNTV09SRD0KCiMgVGhlIHJlY2lwaWVudCBvZiB0aGUgU01TClJJTkdDRU5UUkFMX1JFQ0VJVkVSPQoKIyBUaGUgYmFzZSBVUkwgZm9yIGNhbGwgQVBJIGNhbGxzIAojIFNhbmRib3gKUklOR0NFTlRSQUxfU0VSVkVSX1VSTD1odHRwczovL3BsYXRmb3JtLmRldnRlc3QucmluZ2NlbnRyYWwuY29tCiMgUHJvZHVjdGlvbgojUklOR0NFTlRSQUxfU0VSVkVSX1VSTD1odHRwczovL3BsYXRmb3JtLnJpbmdjZW50cmFsLmNvbQo=</textarea>
 <textarea class="saurus-file" data-file="../send-sms.js" data-mode="javascript">Y29uc3QgU0RLID0gcmVxdWlyZSgncmluZ2NlbnRyYWwnKQpjb25zdCBkb3RlbnYgPSByZXF1aXJlKCdkb3RlbnYnKQoKZG90ZW52LmNvbmZpZygpCgpjb25zdCByY3NkayA9IG5ldyBTREsoewogIHNlcnZlcjogcHJvY2Vzcy5lbnYuUklOR0NFTlRSQUxfU0VSVkVSX1VSTCwKICBhcHBLZXk6IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX0NMSUVOVF9JRCwKICBhcHBTZWNyZXQ6IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX0NMSUVOVF9TRUNSRVQKfSkKCmNvbnN0IHBsYXRmb3JtID0gcmNzZGsucGxhdGZvcm0oKQoKcGxhdGZvcm0ubG9naW4oewogIHVzZXJuYW1lOiBwcm9jZXNzLmVudi5SSU5HQ0VOVFJBTF9VU0VSTkFNRSwKICBleHRlbnNpb246IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX0VYVEVOU0lPTiwKICBwYXNzd29yZDogcHJvY2Vzcy5lbnYuUklOR0NFTlRSQUxfUEFTU1dPUkQKfSkudGhlbihyZXNwb25zZSA9PiB7CiAgcGxhdGZvcm0ucG9zdCgnL2FjY291bnQvfi9leHRlbnNpb24vfi9zbXMnLCB7CiAgICBmcm9tOiB7IHBob25lTnVtYmVyOiBwcm9jZXNzLmVudi5SSU5HQ0VOVFJBTF9VU0VSTkFNRSB9LAogICAgdG86IFsKICAgICAgeyBwaG9uZU51bWJlcjogcHJvY2Vzcy5lbnYuUklOR0NFTlRSQUxfUkVDRUlWRVIgfQogICAgXSwKICAgIHRleHQ6ICdNZXNzYWdlIGNvbnRlbnQnCiAgfSkudGhlbihyZXNwb25zZSA9PiB7CiAgICBjb25zb2xlLmxvZygnU01TIHNlbnQ6ICcgKyByZXNwb25zZS5qc29uKCkuaWQpCiAgfSkuY2F0Y2goZSA9PiB7CiAgICBjb25zb2xlLmVycm9yKGUpCiAgfSkKfSkuY2F0Y2goZSA9PiB7CiAgY29uc29sZS5lcnJvcihlKQp9KQo=</textarea>
-<textarea class="saurus-file" data-file="../send-mms.js" data-mode="javascript">Y29uc3QgU0RLID0gcmVxdWlyZSgncmluZ2NlbnRyYWwnKQpjb25zdCBkb3RlbnYgPSByZXF1aXJlKCdkb3RlbnYnKQpjb25zdCBGb3JtRGF0YSA9IHJlcXVpcmUoJ2Zvcm0tZGF0YScpCgpkb3RlbnYuY29uZmlnKCkKCmNvbnN0IHJjc2RrID0gbmV3IFNESyh7CiAgc2VydmVyOiBwcm9jZXNzLmVudi5SSU5HQ0VOVFJBTF9TRVJWRVJfVVJMLAogIGFwcEtleTogcHJvY2Vzcy5lbnYuUklOR0NFTlRSQUxfQ0xJRU5UX0lELAogIGFwcFNlY3JldDogcHJvY2Vzcy5lbnYuUklOR0NFTlRSQUxfQ0xJRU5UX1NFQ1JFVAp9KQoKY29uc3QgcGxhdGZvcm0gPSByY3Nkay5wbGF0Zm9ybSgpCgpwbGF0Zm9ybS5sb2dpbih7CiAgdXNlcm5hbWU6IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX1VTRVJOQU1FLAogIGV4dGVuc2lvbjogcHJvY2Vzcy5lbnYuUklOR0NFTlRSQUxfRVhURU5TSU9OLAogIHBhc3N3b3JkOiBwcm9jZXNzLmVudi5SSU5HQ0VOVFJBTF9QQVNTV09SRAp9KS50aGVuKHJlc3BvbnNlID0+IHsKICBjb25zdCBmb3JtRGF0YSA9IG5ldyBGb3JtRGF0YSgpCiAgY29uc3QgYm9keSA9IHsKICAgIGZyb206IHsgcGhvbmVOdW1iZXI6IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX1VTRVJOQU1FIH0sCiAgICB0bzogWwogICAgICB7IHBob25lTnVtYmVyOiBwcm9jZXNzLmVudi5SSU5HQ0VOVFJBTF9SRUNFSVZFUiB9CiAgICBdLAogICAgdGV4dDogJ01lc3NhZ2UgY29udGVudCcKICB9CiAgZm9ybURhdGEuYXBwZW5kKCdqc29uJywgQnVmZmVyLmZyb20oSlNPTi5zdHJpbmdpZnkoYm9keSkpLCB7ZmlsZW5hbWU6ICdyZXF1ZXN0Lmpzb24nLCBjb250ZW50VHlwZTogJ2FwcGxpY2F0aW9uL2pzb24nfSkKICBmb3JtRGF0YS5hcHBlbmQoJ2F0dGFjaG1lbnQnLCByZXF1aXJlKCdmcycpLmNyZWF0ZVJlYWRTdHJlYW0oJy4vdGVzdC5qcGcnKSkKICBwbGF0Zm9ybS5wb3N0KCcvYWNjb3VudC9+L2V4dGVuc2lvbi9+L3NtcycsIGZvcm1EYXRhKS50aGVuKHJlc3BvbnNlID0+IHsKICAgIGNvbnNvbGUubG9nKCdNTVMgc2VudDogJyArIHJlc3BvbnNlLmpzb24oKS5pZCkKICB9KS5jYXRjaChlID0+IHsKICAgIGNvbnNvbGUuZXJyb3IoZSkKICB9KQp9KS5jYXRjaChlID0+IHsKICBjb25zb2xlLmVycm9yKGUpCn0pCg==</textarea>
+<textarea class="saurus-file" data-file="../send-mms.js" data-mode="javascript">Y29uc3QgU0RLID0gcmVxdWlyZSgncmluZ2NlbnRyYWwnKQpjb25zdCBkb3RlbnYgPSByZXF1aXJlKCdkb3RlbnYnKQpjb25zdCBGb3JtRGF0YSA9IHJlcXVpcmUoJ2Zvcm0tZGF0YScpCgpkb3RlbnYuY29uZmlnKCkKCmNvbnN0IHJjc2RrID0gbmV3IFNESyh7CiAgICBzZXJ2ZXI6IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX1NFUlZFUl9VUkwsCiAgICBhcHBLZXk6IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX0NMSUVOVF9JRCwKICAgIGFwcFNlY3JldDogcHJvY2Vzcy5lbnYuUklOR0NFTlRSQUxfQ0xJRU5UX1NFQ1JFVAp9KQoKY29uc3QgcGxhdGZvcm0gPSByY3Nkay5wbGF0Zm9ybSgpCgpwbGF0Zm9ybS5sb2dpbih7CiAgICB1c2VybmFtZTogcHJvY2Vzcy5lbnYuUklOR0NFTlRSQUxfVVNFUk5BTUUsCiAgICBleHRlbnNpb246IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX0VYVEVOU0lPTiwKICAgIHBhc3N3b3JkOiBwcm9jZXNzLmVudi5SSU5HQ0VOVFJBTF9QQVNTV09SRAp9KS50aGVuKHJlc3BvbnNlID0+IHsKICAgIGNvbnN0IGZvcm1EYXRhID0gbmV3IEZvcm1EYXRhKCkKICAgIGNvbnN0IGJvZHkgPSB7CiAgICAgICAgZnJvbTogeyBwaG9uZU51bWJlcjogcHJvY2Vzcy5lbnYuUklOR0NFTlRSQUxfVVNFUk5BTUUgfSwKICAgICAgICB0bzogWwogICAgICAgICAgICB7IHBob25lTnVtYmVyOiBwcm9jZXNzLmVudi5SSU5HQ0VOVFJBTF9SRUNFSVZFUiB9CiAgICAgICAgXSwKICAgICAgICB0ZXh0OiAnTWVzc2FnZSBjb250ZW50JwogICAgfQogICAgZm9ybURhdGEuYXBwZW5kKCdqc29uJywgQnVmZmVyLmZyb20oIEpTT04uc3RyaW5naWZ5KGJvZHkpICksIHsKICAgICAgICBmaWxlbmFtZTogJ3JlcXVlc3QuanNvbicsCiAgICAgICAgY29udGVudFR5cGU6ICdhcHBsaWNhdGlvbi9qc29uJwogICAgfSkKICAgIGZvcm1EYXRhLmFwcGVuZCgnYXR0YWNobWVudCcsIHJlcXVpcmUoJ2ZzJykuY3JlYXRlUmVhZFN0cmVhbSgnLi90ZXN0LmpwZycpKQogICAgcGxhdGZvcm0ucG9zdCgnL2FjY291bnQvfi9leHRlbnNpb24vfi9zbXMnLCBmb3JtRGF0YSkudGhlbihyZXNwb25zZSA9PiB7CiAgICAgICAgY29uc29sZS5sb2coJ01NUyBzZW50OiAnICsgcmVzcG9uc2UuanNvbigpLmlkKQogICAgfSkuY2F0Y2goZSA9PiB7CiAgICAgICAgY29uc29sZS5lcnJvcihlKQogICAgfSkKfSkuY2F0Y2goZSA9PiB7CiAgICBjb25zb2xlLmVycm9yKGUpCn0pCg==</textarea>
 <textarea class="saurus-file" data-file="../track-status.js" data-mode="javascript">Y29uc3QgU0RLID0gcmVxdWlyZSgncmluZ2NlbnRyYWwnKQpjb25zdCBkb3RlbnYgPSByZXF1aXJlKCdkb3RlbnYnKQoKZG90ZW52LmNvbmZpZygpCgpjb25zdCByY3NkayA9IG5ldyBTREsoewogIHNlcnZlcjogcHJvY2Vzcy5lbnYuUklOR0NFTlRSQUxfU0VSVkVSX1VSTCwKICBhcHBLZXk6IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX0NMSUVOVF9JRCwKICBhcHBTZWNyZXQ6IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX0NMSUVOVF9TRUNSRVQKfSkKCmNvbnN0IHBsYXRmb3JtID0gcmNzZGsucGxhdGZvcm0oKQoKcGxhdGZvcm0ubG9naW4oewogIHVzZXJuYW1lOiBwcm9jZXNzLmVudi5SSU5HQ0VOVFJBTF9VU0VSTkFNRSwKICBleHRlbnNpb246IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX0VYVEVOU0lPTiwKICBwYXNzd29yZDogcHJvY2Vzcy5lbnYuUklOR0NFTlRSQUxfUEFTU1dPUkQKfSkudGhlbihyZXNwb25zZSA9PiB7CiAgcGxhdGZvcm0ucG9zdCgnL2FjY291bnQvfi9leHRlbnNpb24vfi9zbXMnLCB7CiAgICBmcm9tOiB7IHBob25lTnVtYmVyOiBwcm9jZXNzLmVudi5SSU5HQ0VOVFJBTF9VU0VSTkFNRSB9LAogICAgdG86IFsKICAgICAgeyBwaG9uZU51bWJlcjogcHJvY2Vzcy5lbnYuUklOR0NFTlRSQUxfUkVDRUlWRVIgfQogICAgXSwKICAgIHRleHQ6ICdNZXNzYWdlIGNvbnRlbnQnCiAgfSkudGhlbihyZXNwb25zZSA9PiB7CiAgICBjb25zdCBtZXNzYWdlSWQgPSByZXNwb25zZS5qc29uKCkuaWQKICAgIHBsYXRmb3JtLmdldChgL2FjY291bnQvfi9leHRlbnNpb24vfi9tZXNzYWdlLXN0b3JlLyR7bWVzc2FnZUlkfWApLnRoZW4ocmVzcG9uc2UgPT4gewogICAgICBjb25zb2xlLmxvZyhyZXNwb25zZS5qc29uKCkubWVzc2FnZVN0YXR1cykKICAgIH0pCiAgfSkuY2F0Y2goZSA9PiB7CiAgICBjb25zb2xlLmVycm9yKGUpCiAgfSkKfSkuY2F0Y2goZSA9PiB7CiAgY29uc29sZS5lcnJvcihlKQp9KQo=</textarea>
-<textarea class="saurus-file" data-file="../retrieve-modify.js" data-mode="javascript">Y29uc3QgU0RLID0gcmVxdWlyZSgncmluZ2NlbnRyYWwnKQpjb25zdCBkb3RlbnYgPSByZXF1aXJlKCdkb3RlbnYnKQoKZG90ZW52LmNvbmZpZygpCgpjb25zdCByY3NkayA9IG5ldyBTREsoewogIHNlcnZlcjogcHJvY2Vzcy5lbnYuUklOR0NFTlRSQUxfU0VSVkVSX1VSTCwKICBhcHBLZXk6IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX0NMSUVOVF9JRCwKICBhcHBTZWNyZXQ6IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX0NMSUVOVF9TRUNSRVQKfSkKCmNvbnN0IHBsYXRmb3JtID0gcmNzZGsucGxhdGZvcm0oKQoKcGxhdGZvcm0ubG9naW4oewogIHVzZXJuYW1lOiBwcm9jZXNzLmVudi5SSU5HQ0VOVFJBTF9VU0VSTkFNRSwKICBleHRlbnNpb246IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX0VYVEVOU0lPTiwKICBwYXNzd29yZDogcHJvY2Vzcy5lbnYuUklOR0NFTlRSQUxfUEFTU1dPUkQKfSkudGhlbihyZXNwb25zZSA9PiB7CiAgcGxhdGZvcm0uZ2V0KCcvYWNjb3VudC9+L2V4dGVuc2lvbi9+L21lc3NhZ2Utc3RvcmUnLAogICAgeyBkYXRlRnJvbTogJzIwMTgtMDQtMjBUMDY6MzM6MDAuMDAwWicgfSkudGhlbihyZXNwb25zZSA9PiB7CiAgICBjb25zdCBtZXNzYWdlcyA9IHJlc3BvbnNlLmpzb24oKS5yZWNvcmRzCiAgICBjb25zb2xlLmxvZyhgV2UgZ2V0IG9mIGEgbGlzdCBvZiAke21lc3NhZ2VzLmxlbmd0aH0gbWVzc2FnZXNgKQoKICAgIGNvbnN0IG1lc3NhZ2UgPSBtZXNzYWdlc1swXQogICAgcGxhdGZvcm0ucHV0KGAvYWNjb3VudC9+L2V4dGVuc2lvbi9+L21lc3NhZ2Utc3RvcmUvJHttZXNzYWdlLmlkfWAsIHsgcmVhZFN0YXR1czogJ1JlYWQnIH0pLnRoZW4ocmVzcG9uc2UgPT4gewogICAgICBjb25zb2xlLmxvZyhgTWVzc2FnZSByZWFkU3RhdHVzIGhhcyBiZWVuIGNoYW5nZWQgdG8gJHtyZXNwb25zZS5qc29uKCkucmVhZFN0YXR1c31gKQogICAgfSkuY2F0Y2goZSA9PiB7CiAgICAgIGNvbnNvbGUuZXJyb3IoZSkKICAgIH0pCgogICAgcGxhdGZvcm0uZGVsZXRlKGAvYWNjb3VudC9+L2V4dGVuc2lvbi9+L21lc3NhZ2Utc3RvcmUvJHttZXNzYWdlLmlkfWApLnRoZW4ocmVzcG9uc2UgPT4gewogICAgICBjb25zb2xlLmxvZyhgTWVzc2FnZSAke21lc3NhZ2UuaWR9IGhhcyBiZWVuIGRlbGV0ZWRgKQogICAgfSkuY2F0Y2goZSA9PiB7CiAgICAgIGNvbnNvbGUuZXJyb3IoZSkKICAgIH0pCiAgfSkuY2F0Y2goZSA9PiB7CiAgICBjb25zb2xlLmVycm9yKGUpCiAgfSkKfSkuY2F0Y2goZSA9PiB7CiAgY29uc29sZS5lcnJvcihlKQp9KQo=</textarea>
-<textarea class="saurus-file" data-file="../receive-reply.js" data-mode="javascript">Y29uc3QgU0RLID0gcmVxdWlyZSgncmluZ2NlbnRyYWwnKQpjb25zdCBkb3RlbnYgPSByZXF1aXJlKCdkb3RlbnYnKQoKZG90ZW52LmNvbmZpZygpCgpjb25zdCByY3NkayA9IG5ldyBTREsoewogIHNlcnZlcjogcHJvY2Vzcy5lbnYuUklOR0NFTlRSQUxfU0VSVkVSX1VSTCwKICBhcHBLZXk6IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX0NMSUVOVF9JRCwKICBhcHBTZWNyZXQ6IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX0NMSUVOVF9TRUNSRVQKfSkKCmNvbnN0IHBsYXRmb3JtID0gcmNzZGsucGxhdGZvcm0oKQoKcGxhdGZvcm0ubG9naW4oewogIHVzZXJuYW1lOiBwcm9jZXNzLmVudi5SSU5HQ0VOVFJBTF9VU0VSTkFNRSwKICBleHRlbnNpb246IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX0VYVEVOU0lPTiwKICBwYXNzd29yZDogcHJvY2Vzcy5lbnYuUklOR0NFTlRSQUxfUEFTU1dPUkQKfSkudGhlbihyZXNwb25zZSA9PiB7CiAgY29uc3Qgc3Vic2NyaXB0aW9uID0gcmNzZGsuY3JlYXRlU3Vic2NyaXB0aW9uKCkKICBzdWJzY3JpcHRpb24ub24oc3Vic2NyaXB0aW9uLmV2ZW50cy5ub3RpZmljYXRpb24sIGZ1bmN0aW9uIChtc2cpIHsKICAgIGNvbnNvbGUubG9nKG1zZykKICAgIHBsYXRmb3JtLnBvc3QoJy9hY2NvdW50L34vZXh0ZW5zaW9uL34vc21zJywgewogICAgICBmcm9tOiB7IHBob25lTnVtYmVyOiBwcm9jZXNzLmVudi5SSU5HQ0VOVFJBTF9VU0VSTkFNRSB9LAogICAgICB0bzogWwogICAgICAgIHsgcGhvbmVOdW1iZXI6IG1zZy5ib2R5LmZyb20ucGhvbmVOdW1iZXIgfQogICAgICBdLAogICAgICB0ZXh0OiAnVGhpcyBpcyBhbiBhdXRvbWF0aWMgcmVwbHknCiAgICB9KS50aGVuKHJlc3BvbnNlID0+IHsKICAgICAgY29uc29sZS5sb2coJ1NNUyByZXBsaWVkOiAnICsgcmVzcG9uc2UuanNvbigpLmlkKQogICAgfSkuY2F0Y2goZSA9PiB7CiAgICAgIGNvbnNvbGUuZXJyb3IoZSkKICAgIH0pCiAgfSkKICBzdWJzY3JpcHRpb24uc2V0RXZlbnRGaWx0ZXJzKFsnL2FjY291bnQvfi9leHRlbnNpb24vfi9tZXNzYWdlLXN0b3JlL2luc3RhbnQ/dHlwZT1TTVMnXSkKICAgIC5yZWdpc3RlcigpLnRoZW4ocmVzcG9uc2UgPT4gewogICAgICBjb25zb2xlLmxvZyhyZXNwb25zZS5qc29uKCkpCiAgICB9KQp9KS5jYXRjaChlID0+IHsKICBjb25zb2xlLmVycm9yKGUpCn0pCg==</textarea>
+<textarea class="saurus-file" data-file="../retrieve-modify.js" data-mode="javascript">Y29uc3QgU0RLID0gcmVxdWlyZSgncmluZ2NlbnRyYWwnKQpjb25zdCBkb3RlbnYgPSByZXF1aXJlKCdkb3RlbnYnKQoKZG90ZW52LmNvbmZpZygpCgpjb25zdCByY3NkayA9IG5ldyBTREsoewogIHNlcnZlcjogcHJvY2Vzcy5lbnYuUklOR0NFTlRSQUxfU0VSVkVSX1VSTCwKICBhcHBLZXk6IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX0NMSUVOVF9JRCwKICBhcHBTZWNyZXQ6IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX0NMSUVOVF9TRUNSRVQKfSkKCmNvbnN0IHBsYXRmb3JtID0gcmNzZGsucGxhdGZvcm0oKQoKcGxhdGZvcm0ubG9naW4oewogIHVzZXJuYW1lOiBwcm9jZXNzLmVudi5SSU5HQ0VOVFJBTF9VU0VSTkFNRSwKICBleHRlbnNpb246IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX0VYVEVOU0lPTiwKICBwYXNzd29yZDogcHJvY2Vzcy5lbnYuUklOR0NFTlRSQUxfUEFTU1dPUkQKfSkudGhlbihyZXNwb25zZSA9PiB7CiAgcGxhdGZvcm0uZ2V0KCcvYWNjb3VudC9+L2V4dGVuc2lvbi9+L21lc3NhZ2Utc3RvcmUnLCB7CiAgICBkYXRlRnJvbTogJzIwMTgtMDQtMjBUMDY6MzM6MDAuMDAwWicKICB9KS50aGVuKHJlc3BvbnNlID0+IHsKICAgIGNvbnN0IG1lc3NhZ2VzID0gcmVzcG9uc2UuanNvbigpLnJlY29yZHMKICAgIGNvbnNvbGUubG9nKGBSZXRyaWV2aW5nICR7bWVzc2FnZXMubGVuZ3RofSBtZXNzYWdlc2ApCiAgICBjb25zdCBtZXNzYWdlID0gbWVzc2FnZXNbMF0KICAgIHBsYXRmb3JtLnB1dChgL2FjY291bnQvfi9leHRlbnNpb24vfi9tZXNzYWdlLXN0b3JlLyR7bWVzc2FnZS5pZH1gLCB7CiAgICAgIHJlYWRTdGF0dXM6ICdSZWFkJwogICAgfSkudGhlbihyZXNwb25zZSA9PiB7CiAgICAgIGNvbnNvbGUubG9nKGBNZXNzYWdlIHN0YXR1cyBoYXMgYmVlbiBjaGFuZ2VkIHRvICR7cmVzcG9uc2UuanNvbigpLnJlYWRTdGF0dXN9YCkKICAgIH0pLmNhdGNoKGUgPT4gewogICAgICBjb25zb2xlLmVycm9yKGUpCiAgICB9KQogICAgcGxhdGZvcm0uZGVsZXRlKGAvYWNjb3VudC9+L2V4dGVuc2lvbi9+L21lc3NhZ2Utc3RvcmUvJHttZXNzYWdlLmlkfWApLnRoZW4ocmVzcG9uc2UgPT4gewogICAgICBjb25zb2xlLmxvZyhgTWVzc2FnZSAke21lc3NhZ2UuaWR9IGhhcyBiZWVuIGRlbGV0ZWRgKQogICAgfSkuY2F0Y2goZSA9PiB7CiAgICAgIGNvbnNvbGUuZXJyb3IoZSkKICAgIH0pCiAgfSkuY2F0Y2goZSA9PiB7CiAgICBjb25zb2xlLmVycm9yKGUpCiAgfSkKfSkuY2F0Y2goZSA9PiB7CiAgY29uc29sZS5lcnJvcihlKQp9KQo=</textarea>
+<textarea class="saurus-file" data-file="../receive-reply.js" data-mode="javascript">Y29uc3QgU0RLID0gcmVxdWlyZSgncmluZ2NlbnRyYWwnKQpjb25zdCBkb3RlbnYgPSByZXF1aXJlKCdkb3RlbnYnKQoKZG90ZW52LmNvbmZpZygpCgpjb25zdCByY3NkayA9IG5ldyBTREsoewogIHNlcnZlcjogcHJvY2Vzcy5lbnYuUklOR0NFTlRSQUxfU0VSVkVSX1VSTCwKICBhcHBLZXk6IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX0NMSUVOVF9JRCwKICBhcHBTZWNyZXQ6IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX0NMSUVOVF9TRUNSRVQKfSkKCmNvbnN0IHBsYXRmb3JtID0gcmNzZGsucGxhdGZvcm0oKQoKcGxhdGZvcm0ubG9naW4oewogIHVzZXJuYW1lOiBwcm9jZXNzLmVudi5SSU5HQ0VOVFJBTF9VU0VSTkFNRSwKICBleHRlbnNpb246IHByb2Nlc3MuZW52LlJJTkdDRU5UUkFMX0VYVEVOU0lPTiwKICBwYXNzd29yZDogcHJvY2Vzcy5lbnYuUklOR0NFTlRSQUxfUEFTU1dPUkQKfSkudGhlbihyZXNwb25zZSA9PiB7CiAgdmFyIGhhbmRsZXIgPSBmdW5jdGlvbiAobXNnKSB7CiAgICBjb25zb2xlLmxvZyhtc2cpCiAgICBwbGF0Zm9ybS5wb3N0KCcvYWNjb3VudC9+L2V4dGVuc2lvbi9+L3NtcycsIHsKICAgICAgZnJvbTogeyBwaG9uZU51bWJlcjogcHJvY2Vzcy5lbnYuUklOR0NFTlRSQUxfVVNFUk5BTUUgfSwKICAgICAgdG86IFsKICAgICAgICB7IHBob25lTnVtYmVyOiBtc2cuYm9keS5mcm9tLnBob25lTnVtYmVyIH0KICAgICAgXSwKICAgICAgdGV4dDogJ1RoaXMgaXMgYW4gYXV0b21hdGljIHJlcGx5JwogICAgfSkudGhlbihyZXNwb25zZSA9PiB7CiAgICAgIGNvbnNvbGUubG9nKCdTTVMgcmVwbGllZDogJyArIHJlc3BvbnNlLmpzb24oKS5pZCkKICAgIH0pLmNhdGNoKGUgPT4gewogICAgICBjb25zb2xlLmVycm9yKGUpCiAgICB9KQogIH0KICBjb25zdCBzdWJzY3JpcHRpb24gPSByY3Nkay5jcmVhdGVTdWJzY3JpcHRpb24oKQogIHN1YnNjcmlwdGlvbi5vbihzdWJzY3JpcHRpb24uZXZlbnRzLm5vdGlmaWNhdGlvbiwgaGFuZGxlcikKICBzdWJzY3JpcHRpb24KICAgIC5zZXRFdmVudEZpbHRlcnMoWycvYWNjb3VudC9+L2V4dGVuc2lvbi9+L21lc3NhZ2Utc3RvcmUvaW5zdGFudD90eXBlPVNNUyddKQogICAgLnJlZ2lzdGVyKCkudGhlbihyZXNwb25zZSA9PiB7CiAgICAgIGNvbnNvbGUubG9nKHJlc3BvbnNlLmpzb24oKSkKICAgIH0pCn0pLmNhdGNoKGUgPT4gewogIGNvbnNvbGUuZXJyb3IoZSkKfSkK</textarea>
 </div>
 </div><div class="saurus-overview"><ul></ul></div></div><div class="saurus-code"><div class="file-path"><span class="crumb-container"></span><i class="fa fa-fw fa-folder"></i></div><div class="saurus-editor"></div></div><div class="saurus-explorer"><div class="saurus-file-list"></div><div class="saurus-file-actions"><a href="https://github.com/ringcentral-tutorials/sms-api-nodejs-quickstart" target="_blank" class="explorer-get-code"><i class="fa fa-lg fa-github-square"></i>View Code on GitHub</a><a href="https://github.com/ringcentral-tutorials/sms-api-nodejs-quickstart/archive/master.zip" target="_blank" class="explorer-get-code"><i class="fa fa-lg icon-download"></i>Download Source Code</a></div></div></div></div><footer><div class="footer-content"><div class="footer-content-row layout-2-cols"><div class="footer-content-row-left"><div class="footer-logo"><a href="http://www.ringcentral.com"><span>Back to the main site</span></a></div></div><div class="footer-content-row-right"><ul class="footer-text-links"><li><a href="http://www.ringcentral.com/legal.html" target="_blank"><span>Legal</span></a></li><li><a href="http://www.ringcentral.com/security-statement.html" target="_blank"><span>Security Policy</span></a></li><li><a href="http://www.ringcentral.com/legal/privacy-policy.html" target="_blank"><span>Privacy Policy</span></a></li><li><a ng-href="https://devcommunity.ringcentral.com" target="_blank" href="https://devcommunity.ringcentral.com"><span>Community</span></a></li><li><a href="https://medium.com/ringcentral-developers" target="_blank"><span>Blog</span></a></li></ul></div></div><div class="footer-content-row footer-content-row-last layout-2-cols"><div class="footer-content-row-left"><span class="footer-copyright">© 1999-<span ng-bind="::main.nowObj|date:'yyyy'" class="footer-copyright-to ng-binding">2017</span> RingCentral, Inc. All rights reserved.</span></div><div class="footer-content-row-right"><div class="footer-image-links"><div class="footer-image-link footer-image-link-facebook"><a target="_blank" href="http://www.facebook.com/ringcentral"><i class="fa icon-facebook"></i></a></div><div class="footer-image-link footer-image-link-twitter"><a target="_blank" href="http://twitter.com/ringcentraldevs"><i class="fa icon-twitter"></i></a></div><div class="footer-image-link footer-image-link-google-plus"><a target="_blank" href="https://www.google.com/+ringcentral"><i class="fa icon-google_plus"></i></a></div><div class="footer-image-link footer-image-link-linkedin"><a target="_blank" href="http://www.linkedin.com/company/ringcentral"><i class="fa icon-linkedin"></i></a></div><div class="footer-image-link footer-image-link-youtube"><a target="_blank" href="http://www.youtube.com/ringcentral"><i class="fa icon-youtube"></i></a></div></div></div></div></div></footer></div><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script><script src="ace/ace.js"></script><script src="ace/theme-monokai.js"></script><script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script><script>window.tutorialName="SMS API Node.js Quickstart";</script><script src="viewsaurus.js"></script></body></html>
